@@ -50,8 +50,10 @@ This project is intended to:
 
 1. As a user, I want to see the pizza menu in the Browser App.
 2. As a user, I want to select pizzas and see the running total.
-3. As a user, I want discounts to be applied automatically.
+3. As a user, I want a discount of 10% to be applied automatically, if the sum exceeds 50 Swiss Franks. 
 4. As a user, I want an invoice to be created and saved as a file.
+5. As an admin, I want to see all past transactions, ordered by date.
+
 
 ---
 
@@ -60,7 +62,7 @@ This project is intended to:
 - Show Menu
 - Create Order (choose pizzas)
 - Show Current Order and Total
-- Print Invoice (saved to `invoice_xxx.txt`)
+- Print Invoice (saved to `invoice_xxx.pdf`)
 
 ---
 
