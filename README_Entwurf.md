@@ -56,6 +56,21 @@ voeheriges Scenario: Durch einen persönlicher Budget-Planner in App-Format kann
 4. As a user, I want an invoice to be created and saved as a file.
 5. As an admin, I want to see all past transactions, ordered by date.
 
+
+1. Als User möchte ich, dass die App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).
+2. Als User möchte ich jederzeit mein Passwort in der App ändern können.
+3. Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.
+4. Als User möchte ich, meine Einnahmen und Ausgaben erfassen & anpassen können.
+5. 
+6. 
+7.
+
+Als User möchte ich mein Budget in mehrere Kategorien unterteilen, um den Überblick zu behalten.
+Als User möchte ich die Budget-Kategorien anpassen, hinzufügen und löschen können.
+Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können.
+Als User möchte ich eine Warnung erhalten, wenn ich mein Budget überschreite.
+Als User möchte ich bei Erreichen eines finanziellen Zieles benachrichtigt werden.
+Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.
 ---
 
 ### Use cases
