@@ -3,7 +3,7 @@
 
 ---
 
-# 🍕 PizzaRP – Pizzeria Reference Project (Browser App)
+# Budgetplaner 2.0 (Browser App)
 
 > 🚧 Replace the screenshot with one that shows your main screen.
 
@@ -34,11 +34,8 @@ This project is intended to:
 
 ---
 
-### Problem
-
-> 🚧 Describe the real-world problem your application solves. (Not HOW, but WHAT)
-
-💡 Example: In a small local pizzeria, the staff writes orders and calculates totals by hand. This causes mistakes and inconsistent orders or discounts.
+### Problem :  
+Als Teilzeit-Student gibt es viele Dinge die man zu erledigen hat und zu welchen man einen Überblick behalten soll. Es kann schnell passieren, dass man etwas aus den AUgen verliert.  
 
 ---
 
@@ -48,7 +45,8 @@ This project is intended to:
 
 💡 Example: PizzaRP solves the part of the problem where orders and totals are created by letting a user select items from a menu, validating the inputs, storing orders in a database, and automatically generating a correct invoice.
 
----
+
+voeheriges Scenario: Durch einen persönlicher Budget-Planner in App-Format kann man ganz einfach und von überall einen Einblick in seine Finanzen erhalten.
 
 ### User stories
 
