@@ -35,16 +35,12 @@ This project is intended to:
 ---
 
 ### Problem :
-Als Teilzeit-Student gibt es viele Dinge die man zu erledigen hat und zu welchen man einen Überblick behalten soll. Es kann schnell passieren, dass man etwas aus den AUgen verliert.
+Als Teilzeit-Student gibt es viele Dinge die man zu erledigen hat und zu welchen man einen Überblick behalten soll. Es kann schnell passieren, dass man etwas aus den Augen verliert.
 
-Scenario
-🚧 Describe when and how a user will use your application
+### Scenario: 
+Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von überall einen Einblick in Ihre Finanzen erhalten. 
 
-💡 Example: PizzaRP solves the part of the problem where orders and totals are created by letting a user select items from a menu, validating the inputs, storing orders in a database, and automatically generating a correct invoice.
-
-voeheriges Scenario: Durch einen persönlicher Budget-Planner in App-Format kann man ganz einfach und von überall einen Einblick in seine Finanzen erhalten.
-
-User stories
+### User stories:
 1. Als User möchte ich, dass die App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).
 2. Als User möchte ich jederzeit mein Passwort in der App ändern können.
 3. Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.
