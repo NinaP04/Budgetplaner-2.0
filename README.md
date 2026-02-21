@@ -61,6 +61,13 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ![UML Use Case Diagram](docs/architecture-diagrams/uml_use_case_diagram.png)
 
 **Use cases**
+Hauptmenü anzeigen (Bedienung aller Funktionen)
+Budget-Kategorien verwalten (Kategorien und Einträge anzeigen, erstellen, bearbeiten und löschen)
+Finanzkontrolle pro Kategorie (Budgetlimit und Sparziel setzen, anzeigen, ändern, entfernen)
+Passwort ändern (Benutzerpasswort aktualisieren, Sicherheitsregeln prüfen)
+Daten speichern und Programm beenden (Eingaben werden dauerhaft gesichert und das Programm wird sauber beendet)
+Ausgabe von Statistik (Visualisierung) als PGN-Datei (finanzziele_diagramm.png & monats_summen_diagramm.png
+
 - Show Menu (Customer)
 - Create Order / Add Items (Customer)
 - Show Current Order and Total (Customer)
