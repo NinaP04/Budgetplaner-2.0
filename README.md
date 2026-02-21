@@ -307,7 +307,6 @@ pytest
 
 ---
 
-> 🚧 Fill in the names of all team members and describe their individual contributions below.
 
 | Name      | Contribution |
 |-----------|--------------|
@@ -317,12 +316,31 @@ pytest
 
 ---
 
-## 🤝 Contributing
+## Planung / Zeitplan
 
 ---
 
-> 🚧 This is a template repository for student projects.  
-> 🚧 Do not change this section in your final submission.
+
+| Was      | Datum |  ZUständige Person | Bemerkungen | 
+|-----------|--------------|--------------|--------------|
+| Code fertig stellen|  | 09.03.2026 | Paola | Finanzziel raus & recheriere DB-Sache 1W | 
+| GUI-Mockup erstellen | 09.03.2026 | Gowsi & Nina | |
+| Business Logik  | 27.03.2026  | Nina | |
+| Gui fertig stellen|  | 27.03.2026 | Gowsi | |
+| Code & GUI an Rainer schicken für Feedback 1 | 28.03.2026 | Paola | |
+| 1 Coaching | 07.04.2026 | alle | verbesserte GUI & Code präsentieren & Feedback 2 einholen|
+| Verbesserung Feedback 2 | 28.04.2026 | | |
+| Präsentation aufsetzen & Planen | 12.05.2026 | Nina | |
+| 2 Coaching | 12.05.2026 | alle | REadme zeigen und Feedback einholen |
+| Umsetzen von noch offenen Anliegen | 22.05.2026 | alle | |
+| Finale Abgabe | 31.05.2026 | Nina | Präsi als PDF & GitHub-Link |
+| Präsentation | 26.05 - 02.06.2026 |  alle | * |
+
+---
+
+## 🤝 Contributing
+
+---
 
 - Use this repository as a starting point by importing it into your own GitHub account
 - Work only within your own copy — do not push to the original template
