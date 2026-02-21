@@ -34,29 +34,25 @@ This project is intended to:
 
 ---
 
-### Problem
+### Problem :
+Als Teilzeit-Student gibt es viele Dinge die man zu erledigen hat und zu welchen man einen Überblick behalten soll. Es kann schnell passieren, dass man etwas aus den AUgen verliert.
 
-> 🚧 Describe the real-world problem your application solves. (Not HOW, but WHAT)
-
-💡 Example: In a small local pizzeria, the staff writes orders and calculates totals by hand. This causes mistakes and inconsistent orders or discounts.
-
----
-
-### Scenario
-
-> 🚧 Describe when and how a user will use your application
+Scenario
+🚧 Describe when and how a user will use your application
 
 💡 Example: PizzaRP solves the part of the problem where orders and totals are created by letting a user select items from a menu, validating the inputs, storing orders in a database, and automatically generating a correct invoice.
 
----
+voeheriges Scenario: Durch einen persönlicher Budget-Planner in App-Format kann man ganz einfach und von überall einen Einblick in seine Finanzen erhalten.
 
-### User stories
+User stories
+1. Als User möchte ich, dass die App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).
+2. Als User möchte ich jederzeit mein Passwort in der App ändern können.
+3. Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.
+4. Als User möchte ich, meine Einnahmen und Ausgaben erfassen & anpassen können.
 
-1. As a user, I want to see the pizza menu in the Browser App.
-2. As a user, I want to select pizzas and see the running total.
-3. As a user, I want a discount of 10% to be applied automatically, if the sum exceeds 50 Swiss Franks. 
-4. As a user, I want an invoice to be created and saved as a file.
-5. As an admin, I want to see all past transactions, ordered by date.
+Als User möchte ich mein Budget in mehrere Kategorien unterteilen, um den Überblick zu behalten. Als User möchte ich die Budget-Kategorien anpassen, hinzufügen und löschen können. Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können. Als User möchte ich eine Warnung erhalten, wenn ich mein Budget überschreite. Als User möchte ich bei Erreichen eines finanziellen Zieles benachrichtigt werden. Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.
+
+
 
 ---
 
