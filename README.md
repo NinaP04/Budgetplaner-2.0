@@ -49,7 +49,7 @@ User stories
 2. Als User möchte ich jederzeit mein Passwort in der App ändern können.
 3. Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.
 4. Als User möchte ich, meine Einnahmen und Ausgaben erfassen & anpassen können.
-5. Als User möchte ich mein Budget in mehrere anpassbare Kategorien unterteilen, um den Überblick zu behalten. 
+5. Als User möchte ich mein Budget in mehrere (Limit auf 5) anpassbare Kategorien unterteilen, um den Überblick zu behalten. 
 6. Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können. 
 7. Als User möchte ich eine Warnung erhalten, wenn ich mein Budget überschreite. 
 8. Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.
