@@ -311,9 +311,9 @@ pytest
 
 | Name      | Contribution |
 |-----------|--------------|
-| Student A | NiceGUI UI + documentation |
-| Student B | Database & ORM + documentation |
-| Student C | Business logic + documentation |
+| Gowsi | NiceGUI UI + documentation |
+| Paola | Database & ORM + documentation |
+| Nina | Business logic + documentation |
 
 ---
 
