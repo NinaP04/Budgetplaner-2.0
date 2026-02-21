@@ -38,7 +38,7 @@ This project is intended to:
 Als Teilzeit-Student gibt es viele Dinge die man zu erledigen hat und zu welchen man einen Überblick behalten soll. Es kann schnell passieren, dass man etwas aus den Augen verliert.
 
 ### Scenario: 
-Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von überall einen Einblick in Ihre Finanzen erhalten. 
+Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von überall einen Einblick in Ihre Finanzen erhalten. Mit diesen Informationen können Sie laufend Ihr Budget entsprechend der Situation anpassen.
 
 ### User stories:
 1. Als User möchte ich, dass die App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).
