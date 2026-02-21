@@ -68,9 +68,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 - View Past Transactions (Admin)
 
 **Actors**
-- Customer (places orders)
-- Staff (processes/prints invoices)
-- Admin (reviews transactions)
+- Customer (plans his budget)
 
 ---
 
