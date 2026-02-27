@@ -1,6 +1,3 @@
-> 🚧 This is a template repository for student projects in the course Advanced Programming at FHNW, BSc BIT.  
-> 🚧 Do not keep this section in your final submission.
-
 ---
 
 # 🍕 PizzaRP – Pizzeria Reference Project (Browser App)
@@ -25,8 +22,6 @@ This project is intended to:
 ---
 
 # 🍕 TEMPLATE for documentation
-
-> 🚧 Please remove the paragraphs marked with "🚧". These are comments for preparing the documentation.
 
 ---
 
