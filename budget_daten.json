@@ -1,0 +1,54 @@
+{
+    "accounts": {
+        "pa.pa@studetnts.fhnw.ch": {
+            "email": "pa.pa@studetnts.fhnw.ch",
+            "vorname": "",
+            "name": "",
+            "passwort": "JDJiJDEyJEYxeGcxaWtuY1hoRU11d3pZNDNnRmVVWWVjbXlSN1F1RDZTWFZ0R1VHeFJnb24yYklKeVNP",
+            "budget_kategorien": {
+                "Haushalt": [
+                    "01.01.2026 - Lebensmittel - 50 CHF",
+                    "05.01.2026 - Reinigung - 20 CHF",
+                    "10.01.2026 - Hygiene - 15 CHF"
+                ],
+                "Freizeit": [
+                    "03.01.2026 - Kino - 18 CHF",
+                    "07.01.2026 - Restaurant - 45 CHF",
+                    "12.01.2026 - Bowling - 25 CHF"
+                ]
+            },
+            "budget_limits": {
+                "Haushalt": 500,
+                "Freizeit": 300
+            },
+            "lohn": []
+        },
+        "paola.palmeri@students.fhnw.ch": {
+            "email": "paola.palmeri@students.fhnw.ch",
+            "vorname": "",
+            "name": "",
+            "passwort": "JDJiJDEyJHdDNVRXa1FzUEladC53a05rejVFUk9naDA1L3B1YkhsbGJKWWN6My9jL0NiU3NGYnlMcVd5",
+            "budget_kategorien": {
+                "Haushalt": [
+                    "01.01.2026 - Lebensmittel - 50.00 CHF",
+                    "05.01.2026 - Reinigung - 20.00 CHF",
+                    "10.01.2026 - Hygiene - 15.00 CHF"
+                ],
+                "Freizeit": [
+                    "03.01.2026 - Kino - 18.00 CHF",
+                    "07.01.2026 - Restaurant - 45.00 CHF",
+                    "12.01.2026 - Bowling - 25.00 CHF"
+                ],
+                "hee": [],
+                "sd": [
+                    "24.03.2026 - kaka - 500.00 CHF"
+                ]
+            },
+            "budget_limits": {
+                "Haushalt": 500,
+                "Freizeit": 300
+            },
+            "lohn": []
+        }
+    }
+}
