@@ -49,6 +49,37 @@
                 "Freizeit": 300
             },
             "lohn": []
+        },
+        "nina.prihoda@students.fhnw.ch": {
+            "email": "nina.prihoda@students.fhnw.ch",
+            "vorname": "Nina",
+            "name": "P.",
+            "passwort": "JDJiJDEyJGk5OXJaaVdjN1hPUEUuZDFEcC52Qk9XSGNlc0ptVWVUVUFadnZ3SDBKL1A0YWE4QzJRM3ZT",
+            "budget_kategorien": {
+                "Freizeit": [
+                    "03.01.2026 - Kino - 18.00 CHF",
+                    "07.01.2026 - Restaurant - 45.00 CHF",
+                    "12.01.2026 - Bowling - 25.00 CHF",
+                    "27.03.2026 - Transfer - -8.20 CHF",
+                    "29.03.2026 - Lohn - 2500.00 CHF"
+                ],
+                "Test Haushalt": [
+                    "01.01.2026 - Lebensmittel - 50.00 CHF",
+                    "05.01.2026 - Reinigung - 20.00 CHF",
+                    "10.01.2026 - Hygiene - 15.00 CHF",
+                    "29.03.2026 - test - -10.25 CHF",
+                    "29.03.2026 - Besen - -5.00 CHF"
+                ]
+            },
+            "budget_limits": {
+                "Haushalt": 25.0,
+                "Freizeit": 300,
+                "Test Haushalt": 250.0
+            },
+            "lohn": [
+                "27.03.2026 - Lohn - 2500.0 CHF",
+                "29.03.2026 - Lohn - 4000.0 CHF"
+            ]
         }
     }
 }
