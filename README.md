@@ -182,46 +182,34 @@ All relevant data is managed via an ORM (e.g. SQLModel or SQLAlchemy). For the p
 ### 📂 Repository Structure
 
 ```text
-pizza-nicegui/
-├─ README.md
-├─ pyproject.toml                 # or requirements.txt
-├─ .env.example                   # DATABASE_URL=sqlite:///data/pizza.db
-├─ .gitignore
+budgetplaner/
+├── models/                 # M - Model (Daten & Business-Logik)
+│   ├── __init__.py
+│   ├── user.py            # Nach auth.py & account_manager.py
+│   ├── budget.py          # Nach category_manager.py
+│   ├── finance.py         # Nach finance_control.py
+│   └── data_store.py      # Nach data_handler.py
 │
-├─ docs/                          # screenshots, diagrams, additional documentation if needed
-│  ├─ ui-images/
-│  │  ├─ ui_showcase.png
-│  │  ├─ ui_menu.png
-│  │  ├─ ui_checkout.png
-│  │  ├─ wireframe_home.png
-│  │  └─ wireframe_checkout.png
-│  └─ architecture-diagrams/
-│     ├─ uml_use_case_diagram.png
-│     ├─ uml_class_architecture.png
-│     ├─ uml_class_domain.png
-│     ├─ uml_class_persistence.png
-│     └─ er_diagram.png
+├── views/                 # V - View (Benutzeroberfläche)
+│   ├── __init__.py
+│   ├── cli_view.py        # Alle Print-Statements & Eingaben
+│   ├── menu_view.py       # Menü-Verwaltung
+│   └── formatter.py       # Formatierung & Styling
 │
-├─ app/
-│  ├─ main.py                        # entrypoint, starts the main module(s)
-|  └─ pizzarp/                       # main module
-│     ├─ __main__.py                 # entrypoint of the module, starts NiceGui
-|     ├─ persistence/                # example of a module; organize in modules according to the architecture
-│     |  ├─ __main.py__              # initializes data access
-│     |  ├─ models.py                # ORM models (User, Pizza, Order, OrderItem)
-│     |  ├─ queries.py               # query helpers (menu, orders)
-|     |  └─ db.py                    # create_engine + session factory + init_db()
-│     ├─ pricing.py                  # subtotal/discount/total logic
-│     ├─ invoice.py                  # generate invoice file
-│     └─ seed.py                     # seed pizzas/users
+├── controllers/           # C - Controller (Logik-Orchestrierung)
+│   ├── __init__.py
+│   ├── auth_controller.py
+│   ├── budget_controller.py
+│   ├── account_controller.py
+│   └── main_controller.py
 │
-├─ data/                          # sqlite database (gitignored)
-├─ invoices/                      # generated invoices (gitignored)
-└─ tests/
-   ├─ test_pricing.py
-   └─ test_invoice.py
-```
-
+├── utils/
+│   ├── __init__.py
+│   ├── validators.py
+│   └── constants.py
+│
+├── main.py               # Entry-Point
+└── budget_daten.json
 ---
 
 ### How to Run
