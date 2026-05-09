@@ -1,4 +1,4 @@
-"""Validierungsfunktionen für Budgetdaten."""
+"""Validierungsfunktionen für Budgetdaten (Datum, Beträge und Limits)."""
 
 from datetime import datetime
 
