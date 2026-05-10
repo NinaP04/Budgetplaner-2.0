@@ -64,7 +64,7 @@ class AuthController:
         return None
 
     def password_reset_flow(self, email: str) -> bool:
-        self._view.show_message("Passwort zuruecksetzen", "01")
+        self._view.show_message("Passwort zurücksetzen", "01")
         entered_email = self._view.prompt_email()
         if entered_email != email:
             self._view.show_message(

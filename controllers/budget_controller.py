@@ -229,7 +229,7 @@ class BudgetController:
                 return True
 
             self._persist_categories(user_data)
-            self._view.show_success(f"Kategorie '{name}' wurde hinzugefuegt.")
+            self._view.show_success(f"Kategorie '{name}' wurde hinzugefügt.")
             return True
 
         if action == "3":
