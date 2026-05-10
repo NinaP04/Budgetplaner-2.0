@@ -1,4 +1,4 @@
-"""Auth domain model for password and login workflows."""
+"""Domänenmodell für Passwort- und Login-Abläufe."""
 
 import base64
 import random
@@ -9,7 +9,7 @@ import bcrypt
 
 
 class AuthModel:
-    """Pure model logic for authentication and password handling."""
+    """Reine Modelllogik für Authentifizierung und Passwortverwaltung."""
 
     def __init__(self) -> None:
         self._reset_codes: Dict[str, str] = {}

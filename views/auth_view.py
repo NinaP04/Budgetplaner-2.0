@@ -1,8 +1,8 @@
-"""CLI view for authentication interactions."""
+"""CLI-Ansicht für Authentifizierungsinteraktionen."""
 
 
 class AuthView:
-    """Renders auth prompts and feedback in the terminal."""
+    """Zeigt Authentifizierungsabfragen und Rückmeldungen im Terminal an."""
 
     def __init__(self, input_func=input):
         self._input = input_func

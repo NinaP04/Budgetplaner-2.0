@@ -1,4 +1,4 @@
-"""Anwendungseinstieg fuer den Budgetplaner im MVC-Aufbau."""
+"""Anwendungseinstieg für den Budgetplaner im MVC-Aufbau."""
 
 from controllers.main_controller import MainController
 

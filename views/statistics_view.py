@@ -1,22 +1,22 @@
-"""CLI + plotting view for budget statistics."""
+"""CLI- und grafische Darstellung für Budgetstatistiken."""
 
 import matplotlib.pyplot as plt
 import numpy as np
 
 
 class StatisticsView:
-    """Renders statistics menu and charts."""
+    """Zeigt Statistikmenüs und Diagramme an."""
 
     def __init__(self, input_func=input):
         self._input = input_func
 
     def show_menu(self) -> str:
-        print("\n\033[01mStatistik-Menue\033[0m")
+        print("\n\033[01mStatistik-Menü\033[0m")
         print("1. Monatsstatistik")
-        return self._input("\n\033[34mWaehle deine Statistik aus (0. Zurueck): \033[0m").strip()
+        return self._input("\n\033[34mWähle deine Statistik aus (0. Zurück): \033[0m").strip()
 
     def wait_for_enter(self) -> None:
-        self._input("\n\033[34mDruecke Enter, um zurueckzukehren.\033[0m")
+        self._input("\n\033[34mDrücke Enter, um zurückzukehren.\033[0m")
 
     @staticmethod
     def plot_monthly_sums(categories_data: dict) -> None:

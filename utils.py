@@ -1,6 +1,6 @@
 """
-Hilfsfunktionen-Modul für Budget-Tracker
-Enthält Validierungs- und Utility-Klassen
+Hilfsmodul für den Budget-Tracker.
+Enthält Validierungs- und Hilfsklassen.
 """
 
 import threading
@@ -24,8 +24,8 @@ class BudgetValidator:
         Args:
             datum_str (str): Datum als String im Format DD.MM.YYYY
 
-        Returns:
-            bool: True wenn Datum gültig ist, sonst False
+        Rückgabe:
+            bool: True, wenn das Datum gültig ist, sonst False
         """
         try:
             datetime.strptime(datum_str, "%d.%m.%Y")
@@ -42,8 +42,8 @@ class BudgetValidator:
             betrag (float): Zu validierender Betrag
             max_wert (float, optional): Maximaler erlaubter Wert
 
-        Returns:
-            bool: True wenn Betrag gültig ist, sonst False
+        Rückgabe:
+            bool: True, wenn der Betrag gültig ist, sonst False
         """
         if betrag < 0:
             print("\n\033[31mFehler: Der Betrag darf nicht negativ sein!\033[0m")

@@ -1,4 +1,4 @@
-"""Controller fuer Budgetfunktionen im MVC-Aufbau."""
+"""Controller für Budgetfunktionen im MVC-Aufbau."""
 
 from typing import Callable
 
@@ -20,7 +20,7 @@ class BudgetController:
         self._stats_view = StatisticsView(self._timed_input)
 
     def load_from_user_data(self, user_data: dict) -> None:
-        """Importiert gespeicherte Kategorien in das interne Budget-Model."""
+        """Importiert gespeicherte Kategorien in das interne Budget-Modell."""
         self._budget_manager = BudgetManager()
 
         gespeicherte_kategorien = user_data.get("budget_kategorien", {})
@@ -190,7 +190,7 @@ class BudgetController:
             self._view.show_error("Ungueltige Eingabe.")
 
     def handle_main_action(self, action: str, user_data: dict) -> bool:
-        """Verarbeitet Aktionen 1-5 des Hauptmenues.
+        """Verarbeitet die Aktionen 1 bis 5 des Hauptmenüs.
 
         Returns:
                 True, wenn die Aktion verarbeitet wurde, sonst False.

@@ -2,7 +2,7 @@ from typing import Optional, Dict, Any, List
 
 
 class User:
-    """Domain model für Benutzer (MVC-kompatibel).
+    """Domänenmodell für Benutzer (MVC-kompatibel).
 
     Felder stimmen mit dem bestehenden Datenschema überein, damit
     bestehende Codepfade weiterhin `dict`-basierte Accounts nutzen können.
@@ -53,7 +53,7 @@ class User:
             "lohn": self.lohn,
         }
 
-    # Helper-APIs für Controller-Logik
+    # Hilfs-APIs für die Controller-Logik
     def add_lohn(self, datum: str, betrag: float) -> str:
         eintrag = f"{datum} - Lohn - {betrag} CHF"
         self.lohn.append(eintrag)

@@ -1,4 +1,4 @@
-"""Controller fuer Kontoverwaltung im MVC-Aufbau."""
+"""Controller für die Kontoverwaltung im MVC-Aufbau."""
 
 from typing import Callable, Optional, Tuple
 
@@ -7,7 +7,7 @@ from views.account_view import AccountView
 
 
 class AccountController:
-    """Steuert Kontomenue und delegiert Datenaenderungen an das Model."""
+    """Steuert das Kontomenü und delegiert Datenänderungen an das Modell."""
 
     def __init__(
             self,
@@ -28,11 +28,11 @@ class AccountController:
     def _active_user(self) -> dict:
         if not self.current_user_email or self.current_user_email not in self.accounts:
             raise RuntimeError(
-                "Kein aktiver Benutzer fuer AccountController gesetzt.")
+                "Kein aktiver Benutzer für AccountController gesetzt.")
         return self.accounts[self.current_user_email]
 
     def menu_loop(self, auth_controller) -> Tuple[Optional[str], bool]:
-        """Fuehrt das Konto-Menue aus.
+        """Führt das Kontomenü aus.
 
         Returns:
                 tuple(new_email_or_none, logout)

@@ -9,7 +9,7 @@ from views.menu_view import MenuView
 
 
 class MainController:
-    """Orchestriert Auth-, Konto- und Budget-Controller."""
+    """Steuert die Zusammenarbeit von Auth-, Konto- und Budget-Controller."""
 
     def __init__(self, timeout_seconds: int = 1200):
         self.data_handler = DataHandler()

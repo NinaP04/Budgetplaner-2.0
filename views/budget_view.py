@@ -1,4 +1,4 @@
-"""CLI view for budget categories and entries."""
+"""CLI-Ansicht für Budgetkategorien und Einträge."""
 
 import re
 from datetime import datetime
@@ -8,7 +8,7 @@ from utils import validiere_datum
 
 
 class BudgetView:
-    """Renders budget menus and converts user input into domain objects."""
+    """Zeigt Budgetmenüs an und wandelt Benutzereingaben in Domänenobjekte um."""
 
     def __init__(self, input_func=input):
         self._input = input_func
@@ -36,15 +36,15 @@ class BudgetView:
             print(f"{idx}. {name}")
 
         try:
-            selected = int(self._input("Nummer waehlen: ").strip()) - 1
+            selected = int(self._input("Nummer wählen: ").strip()) - 1
         except ValueError:
-            print("\033[31mUngueltige Auswahl.\033[0m")
+            print("\033[31mUngültige Auswahl.\033[0m")
             return None
 
         if 0 <= selected < len(names):
             return names[selected]
 
-        print("\033[31mUngueltige Auswahl.\033[0m")
+        print("\033[31mUngültige Auswahl.\033[0m")
         return None
 
     def show_category_edit_menu(self, name: str) -> str:

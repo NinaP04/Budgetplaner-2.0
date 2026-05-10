@@ -1,11 +1,11 @@
-"""Account domain model for profile and salary management."""
+"""Domänenmodell für Profil- und Lohnverwaltung."""
 
 from datetime import datetime
 from typing import Optional, Tuple
 
 
 class AccountModel:
-    """Pure model logic for account data mutations."""
+    """Reine Modelllogik für Änderungen an Kontodaten."""
 
     @staticmethod
     def ensure_salary_list(user_data: dict) -> None:

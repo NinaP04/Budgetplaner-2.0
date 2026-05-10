@@ -9,38 +9,38 @@ class AccountView:
 
     @staticmethod
     def show_account_menu() -> None:
-        print("\n\033[01mKonto Menue\033[0m")
+        print("\n\033[01mKonto Menü\033[0m")
         print("1. Kontodaten anzeigen")
-        print("2. Vorname aendern")
-        print("3. Nachname aendern")
-        print("4. E-Mail aendern")
-        print("5. Passwort aendern")
-        print("6. Lohn hinzufuegen")
-        print("7. Konto loeschen")
+        print("2. Vorname ändern")
+        print("3. Nachname ändern")
+        print("4. E-Mail ändern")
+        print("5. Passwort ändern")
+        print("6. Lohn hinzufügen")
+        print("7. Konto löschen")
 
     def prompt_choice(self) -> str:
-        return self._input("\n\033[34mWaehle eine Aktion (0. Zurueck): \033[0m")
+        return self._input("\n\033[34mWähle eine Aktion (0. Zurück): \033[0m")
 
     def prompt_text(self, label: str) -> str:
         return self._input(f"\033[34m{label}\033[0m").strip()
 
     def prompt_salary_data(self) -> tuple[str, str]:
         date_str = self._input(
-            "\033[34mDatum (DD.MM.YYYY oder '.' fuer heute): \033[0m").strip()
+            "\033[34mDatum (DD.MM.YYYY oder '.' für heute): \033[0m").strip()
         amount_str = self._input("\033[34mBetrag in CHF: \033[0m").strip()
         return date_str, amount_str
 
     def confirm_account_delete(self) -> bool:
-        print("\n\033[31mWARNUNG: Dein gesamtes Konto wird geloescht!\033[0m")
+        print("\n\033[31mWARNUNG: Dein gesamtes Konto wird gelöscht!\033[0m")
         print(
             "\033[31mAlle Kategorien, Limits und Finanzdaten werden entfernt.\n\033[0m")
         first = self._input(
-            "\033[34mBist du sicher? (Y/y zum Bestaetigen): \033[0m")
+            "\033[34mBist du sicher? (Y/y zum Bestätigen): \033[0m")
         if first.lower() != "y":
             return False
         second = self._input(
-            "\033[34mBitte tippe 'LOESCHEN' zur endgueltigen Bestaetigung: \033[0m")
-        return second == "LOESCHEN"
+            "\033[34mBitte tippe 'LÖSCHEN' zur endgültigen Bestätigung: \033[0m")
+        return second == "LÖSCHEN"
 
     @staticmethod
     def show_profile(data: dict) -> None:

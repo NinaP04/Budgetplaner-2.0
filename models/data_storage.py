@@ -121,7 +121,7 @@ class DataHandler:
         self._speichern(self.accounts)
 
     # ---------------------------------------------------------
-    # Private Methode: tatsächliches Schreiben in Datei
+    # Private Methode: tatsächliches Schreiben in die Datei
     # ---------------------------------------------------------
     def _speichern(self, accounts):
         daten = {"accounts": accounts}

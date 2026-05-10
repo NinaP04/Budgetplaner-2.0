@@ -5,7 +5,7 @@ import threading
 
 
 class InaktivitätsManager:
-    """Erstellt einen timed input, der bei Inaktivität ausloggt."""
+    """Erstellt eine zeitgesteuerte Eingabe, die bei Inaktivität ausloggt."""
 
     def __init__(self, timeout, daten_speichern_func):
         self.timeout = timeout
