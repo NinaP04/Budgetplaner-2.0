@@ -185,16 +185,22 @@ All relevant data is managed via an ORM (e.g. SQLModel or SQLAlchemy). For the p
 budgetplaner/
 ├── models/                 # M - Model (Daten & Business-Logik)
 │   ├── __init__.py
-│   ├── user.py            # Nach auth.py & account_manager.py
-│   ├── budget.py          # Nach category_manager.py
-│   ├── finance.py         # Nach finance_control.py
-│   └── data_store.py      # Nach data_handler.py
+│   ├── user.py
+│   ├── auth_model.py
+│   ├── account_model.py
+│   ├── budget.py
+│   ├── finance.py
+│   └── data_storage.py
 │
 ├── views/                 # V - View (Benutzeroberfläche)
 │   ├── __init__.py
-│   ├── cli_view.py        # Alle Print-Statements & Eingaben
-│   ├── menu_view.py       # Menü-Verwaltung
-│   └── formatter.py       # Formatierung & Styling
+│   ├── cli_view.py
+│   ├── auth_view.py
+│   ├── account_view.py
+│   ├── budget_view.py
+│   ├── statistics_view.py
+│   ├── menu_view.py
+│   └── formatter.py
 │
 ├── controllers/           # C - Controller (Logik-Orchestrierung)
 │   ├── __init__.py
