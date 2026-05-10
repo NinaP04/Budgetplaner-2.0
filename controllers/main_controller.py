@@ -70,7 +70,7 @@ class MainController:
                     "Du wurdest erfolgreich ausgeloggt.")
                 return "logout"
 
-            self._menu_view.show_error("Achtung: Ungueltige Eingabe!")
+            self._menu_view.show_error("Achtung: Ungültige Eingabe!")
 
     def start(self):
         while True:

@@ -100,9 +100,9 @@ class AccountController:
                     self._model.delete_account(
                         self.accounts, self.current_user_email)
                     self._save_callback()
-                    self._view.show_success("Konto erfolgreich geloescht.")
+                    self._view.show_success("Konto erfolgreich gelöscht.")
                     return None, True
-                self._view.show_error("Loeschen abgebrochen.")
+                self._view.show_error("Löschen abgebrochen.")
                 continue
 
-            self._view.show_error("Ungueltige Eingabe.")
+            self._view.show_error("Ungültige Eingabe.")

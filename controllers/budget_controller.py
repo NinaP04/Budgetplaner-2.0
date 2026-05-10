@@ -24,9 +24,9 @@ class BudgetController:
         self._budget_manager = BudgetManager()
 
         gespeicherte_kategorien = user_data.get("budget_kategorien", {})
-        for name, eintraege in gespeicherte_kategorien.items():
+        for name, einträge in gespeicherte_kategorien.items():
             self._budget_manager.add_category(name)
-            for eintrag in eintraege:
+            for eintrag in einträge:
                 self._budget_manager.add_entry(
                     name, BudgetEntry.from_string(eintrag))
 
@@ -60,7 +60,7 @@ class BudgetController:
                 new_name = self._view.prompt_category_name()
                 if not self._view.validate_category_name(new_name):
                     self._view.show_error(
-                        "Ungueltiger Name - nur Buchstaben und Leerzeichen erlaubt.")
+                        "Ungültiger Name - nur Buchstaben und Leerzeichen erlaubt.")
                     continue
                 try:
                     self._budget_manager.rename_category(name, new_name)
@@ -93,7 +93,7 @@ class BudgetController:
 
             if choice == "3":
                 if not category or not category.entries:
-                    self._view.show_error("Keine Eintraege vorhanden.")
+                    self._view.show_error("Keine Einträge vorhanden.")
                     continue
 
                 self._view.show_entries(category.entries)
@@ -101,20 +101,20 @@ class BudgetController:
                     index = int(self._view.prompt_delete_entry_index()) - 1
                     deleted = category.delete_entry(index)
                     self._persist_categories(user_data)
-                    self._view.show_success(f"Eintrag '{deleted}' geloescht.")
+                    self._view.show_success(f"Eintrag '{deleted}' gelöscht.")
                 except Exception:
-                    self._view.show_error("Ungueltige Auswahl.")
+                    self._view.show_error("Ungültige Auswahl.")
                 continue
 
             if choice == "4":
                 if self._view.confirm_delete_category():
                     self._budget_manager.delete_category(name)
                     self._persist_categories(user_data)
-                    self._view.show_success("Kategorie geloescht.")
+                    self._view.show_success("Kategorie gelöscht.")
                     return
                 continue
 
-            self._view.show_error("Ungueltige Auswahl.")
+            self._view.show_error("Ungültige Auswahl.")
 
     def _manage_budget_limits(self, user_data: dict) -> None:
         category_name = self._choose_category()
@@ -122,13 +122,13 @@ class BudgetController:
             return
 
         while True:
-            print(f"\n\033[1mBudgetlimite fuer '{category_name}'\033[0m")
+            print(f"\n\033[1mBudgetlimite für '{category_name}'\033[0m")
             print("1. Anzeigen")
             print("2. Setzen")
-            print("3. Aendern")
+            print("3. Ändern")
             print("4. Entfernen")
             choice = self._timed_input(
-                "\n\033[34mWaehle eine Option (0 = Zurueck, 1-4): \033[0m")
+                "\n\033[34mWähle eine Option (0 = Zurück, 1-4): \033[0m")
 
             limits = user_data.setdefault("budget_limits", {})
 
@@ -152,7 +152,7 @@ class BudgetController:
                         )
                     )
                 except ValueError:
-                    self._view.show_error("Ungueltiger Betrag.")
+                    self._view.show_error("Ungültiger Betrag.")
                     continue
 
                 if not validiere_positiven_betrag(amount, MAX_BUDGET_LIMIT):
@@ -173,7 +173,7 @@ class BudgetController:
                     self._view.show_error("Kein Limit vorhanden.")
                 continue
 
-            self._view.show_error("Ungueltige Eingabe.")
+            self._view.show_error("Ungültige Eingabe.")
 
     def _show_statistics(self, user_data: dict) -> None:
         while True:
@@ -187,7 +187,7 @@ class BudgetController:
                     data.monats_summen_pro_kategorie())
                 self._stats_view.wait_for_enter()
                 continue
-            self._view.show_error("Ungueltige Eingabe.")
+            self._view.show_error("Ungültige Eingabe.")
 
     def handle_main_action(self, action: str, user_data: dict) -> bool:
         """Verarbeitet die Aktionen 1 bis 5 des Hauptmenüs.
@@ -204,7 +204,7 @@ class BudgetController:
             name = self._view.prompt_category_name()
             if not self._view.validate_category_name(name):
                 self._view.show_error(
-                    "Ungueltiger Name - nur Buchstaben und Leerzeichen erlaubt.")
+                    "Ungültiger Name - nur Buchstaben und Leerzeichen erlaubt.")
                 return True
 
             try:

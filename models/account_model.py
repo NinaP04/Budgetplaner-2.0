@@ -27,7 +27,7 @@ class AccountModel:
         if not value:
             return False, "Vorname darf nicht leer sein."
         user_data["vorname"] = value
-        return True, "Vorname erfolgreich geaendert."
+        return True, "Vorname erfolgreich geändert."
 
     @staticmethod
     def change_lastname(user_data: dict, value: str) -> Tuple[bool, str]:
@@ -35,7 +35,7 @@ class AccountModel:
         if not value:
             return False, "Nachname darf nicht leer sein."
         user_data["name"] = value
-        return True, "Nachname erfolgreich geaendert."
+        return True, "Nachname erfolgreich geändert."
 
     @staticmethod
     def change_email(accounts: dict, current_email: str, new_email: str) -> Tuple[bool, str, Optional[str]]:

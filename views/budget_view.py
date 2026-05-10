@@ -60,7 +60,7 @@ class BudgetView:
         return self._input("1=Einnahme, 2=Ausgabe: ").strip()
 
     def prompt_entry_date(self) -> str:
-        return self._input("Datum (DD.MM.YYYY oder . fuer heute): ").strip()
+        return self._input("Datum (DD.MM.YYYY oder . für heute): ").strip()
 
     def prompt_entry_art(self) -> str:
         return self._input("Art der Kosten: ").strip()

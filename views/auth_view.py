@@ -11,7 +11,7 @@ class AuthView:
         return self._input("\033[34mE-Mail: \033[0m").strip().lower()
 
     def prompt_password(self, allow_reset: bool = False) -> str:
-        label = "Passwort ('f' fuer Reset): " if allow_reset else "Passwort: "
+        label = "Passwort ('f' für Reset): " if allow_reset else "Passwort: "
         return self._input(f"\033[34m{label}\033[0m").strip()
 
     def prompt_new_password(self) -> tuple[str, str]:

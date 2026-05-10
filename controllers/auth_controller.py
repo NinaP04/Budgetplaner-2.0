@@ -30,7 +30,7 @@ class AuthController:
 
         if email not in self.accounts:
             self._view.show_message(
-                "Fuer diese E-Mail existiert kein Konto.", "33")
+                "Für diese E-Mail existiert kein Konto.", "33")
             if not self._view.ask_create_account():
                 self._view.show_message("Okay, bitte erneut versuchen.", "34")
                 return None
@@ -91,7 +91,7 @@ class AuthController:
         if not force_without_old and user_data.get("passwort"):
             current = self._view.prompt_password(allow_reset=False)
             if not self._model.verify_password(current, user_data.get("passwort")):
-                self._view.show_message("Ungueltiges Passwort.", "31")
+                self._view.show_message("Ungültiges Passwort.", "31")
                 return False
 
         self._view.show_password_rules()
@@ -101,7 +101,7 @@ class AuthController:
 
             if pw1 != pw2:
                 self._view.show_message(
-                    "Passwoerter stimmen nicht ueberein.", "31")
+                    "Passwörter stimmen nicht überein.", "31")
                 continue
 
             valid, error = self._model.validate_password_rules(pw1)
@@ -111,5 +111,5 @@ class AuthController:
 
             self._model.set_password(user_data, pw1)
             self._save_callback()
-            self._view.show_message("Passwort erfolgreich geaendert.", "32")
+            self._view.show_message("Passwort erfolgreich geändert.", "32")
             return True
