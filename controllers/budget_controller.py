@@ -196,8 +196,23 @@ class BudgetController:
                 True, wenn die Aktion verarbeitet wurde, sonst False.
         """
         if action == "1":
-            self._view.show_categories(
-                list(self._budget_manager.categories.keys()))
+            names = list(self._budget_manager.categories.keys())
+            self._view.show_categories(names)
+            if not names:
+                return True
+
+            category_name = self._view.choose_category(names, show_list=False)
+            if not category_name:
+                return True
+
+            category = self._budget_manager.categories.get(category_name)
+            if not category or not category.entries:
+                self._view.show_error("Keine Einträge vorhanden.")
+                return True
+
+            print()
+            self._view.show_success(f"Einträge in '{category_name}':")
+            self._view.show_entries(category.entries)
             return True
 
         if action == "2":

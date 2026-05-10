@@ -26,14 +26,15 @@ class BudgetView:
     def prompt_category_name(self) -> str:
         return self._input("Name der Kategorie: ").strip()
 
-    def choose_category(self, names: list[str]):
+    def choose_category(self, names: list[str], show_list: bool = True):
         if not names:
             print("\033[33mKeine Kategorien vorhanden.\033[0m")
             return None
 
-        print("\n\033[1mKategorien:\033[0m")
-        for idx, name in enumerate(names, start=1):
-            print(f"{idx}. {name}")
+        if show_list:
+            print("\n\033[1mKategorien:\033[0m")
+            for idx, name in enumerate(names, start=1):
+                print(f"{idx}. {name}")
 
         try:
             selected = int(self._input("Nummer wählen: ").strip()) - 1
