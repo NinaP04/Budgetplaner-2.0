@@ -8,6 +8,11 @@ class AccountView:
         self._input = input_func
 
     @staticmethod
+    def _clean_name_part(value) -> str:
+        text = "" if value is None else str(value).strip()
+        return "" if text == "0" else text
+
+    @staticmethod
     def show_account_menu() -> None:
         print("\n\033[01mKonto Menü\033[0m")
         print("1. Kontodaten anzeigen")
@@ -46,8 +51,10 @@ class AccountView:
     def show_profile(data: dict) -> None:
         print("\n\033[01mKontoinformationen\033[0m")
         print("---------------------------------------------")
-        print(f"Vorname:  {data.get('vorname', '-')}")
-        print(f"Nachname: {data.get('name', '-')}")
+        vorname = AccountView._clean_name_part(data.get('vorname')) or '-'
+        nachname = AccountView._clean_name_part(data.get('name')) or '-'
+        print(f"Vorname:  {vorname}")
+        print(f"Nachname: {nachname}")
         print(f"E-Mail:   {data.get('email', '-')}")
         print(f"Lohn:     {data.get('lohn', '-')}")
         print("---------------------------------------------\n")

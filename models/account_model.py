@@ -8,15 +8,22 @@ class AccountModel:
     """Reine Modelllogik für Änderungen an Kontodaten."""
 
     @staticmethod
+    def _clean_name_part(value) -> str:
+        text = "" if value is None else str(value).strip()
+        return "" if text == "0" else text
+
+    @staticmethod
     def ensure_salary_list(user_data: dict) -> None:
         if "lohn" not in user_data:
             user_data["lohn"] = []
 
     @staticmethod
     def profile_data(user_data: dict) -> dict:
+        vorname = AccountModel._clean_name_part(user_data.get("vorname"))
+        nachname = AccountModel._clean_name_part(user_data.get("name"))
         return {
-            "vorname": user_data.get("vorname", "-"),
-            "name": user_data.get("name", "-"),
+            "vorname": vorname,
+            "name": nachname,
             "email": user_data.get("email", "-"),
             "lohn": user_data.get("lohn", []),
         }
@@ -24,7 +31,7 @@ class AccountModel:
     @staticmethod
     def change_firstname(user_data: dict, value: str) -> Tuple[bool, str]:
         value = value.strip()
-        if not value:
+        if not value or value == "0":
             return False, "Vorname darf nicht leer sein."
         user_data["vorname"] = value
         return True, "Vorname erfolgreich geändert."
@@ -32,7 +39,7 @@ class AccountModel:
     @staticmethod
     def change_lastname(user_data: dict, value: str) -> Tuple[bool, str]:
         value = value.strip()
-        if not value:
+        if not value or value == "0":
             return False, "Nachname darf nicht leer sein."
         user_data["name"] = value
         return True, "Nachname erfolgreich geändert."

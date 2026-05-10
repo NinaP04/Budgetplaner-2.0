@@ -111,7 +111,13 @@ class DataHandler:
             self._speichern(migrated)
             return migrated
 
-        return daten["accounts"]
+        accounts = daten["accounts"]
+        for user_data in accounts.values():
+            if user_data.get("vorname") == "0":
+                user_data["vorname"] = ""
+            if user_data.get("name") == "0":
+                user_data["name"] = ""
+        return accounts
 
     # ---------------------------------------------------------
     # Öffentliche Methode: Speichern

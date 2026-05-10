@@ -9,8 +9,17 @@ class MenuView:
     def __init__(self, input_func=input):
         self._input = input_func
 
+    @staticmethod
+    def _clean_name_part(value) -> str:
+        text = "" if value is None else str(value).strip()
+        return "" if text == "0" else text
+
     def show_main_menu(self, firstname: str, lastname: str) -> str:
-        print(Formatter.titel(f"Willkommen {firstname} {lastname}"))
+        fname = self._clean_name_part(firstname)
+        if fname:
+            print(Formatter.titel(f"Willkommen {fname}"))
+        else:
+            print(Formatter.titel("Willkommen"))
         print(Formatter.titel("Kategorien Menü"))
         print("1. Kategorien anzeigen")
         print("2. Kategorie hinzufügen")
