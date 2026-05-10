@@ -9,13 +9,8 @@ class MenuView:
     def __init__(self, input_func=input):
         self._input = input_func
 
-    @staticmethod
-    def _clean_name_part(value) -> str:
-        text = "" if value is None else str(value).strip()
-        return "" if text == "0" else text
-
     def show_main_menu(self, firstname: str, lastname: str) -> str:
-        fname = self._clean_name_part(firstname)
+        fname = firstname.strip() if firstname is not None else ""
         if fname:
             print(Formatter.titel(f"Willkommen {fname}"))
         else:

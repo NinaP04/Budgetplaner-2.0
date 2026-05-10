@@ -2,11 +2,6 @@ class CLIView:
     """Alle Ausgaben & Eingaben für Terminal-UI"""
 
     @staticmethod
-    def _clean_name_part(value) -> str:
-        text = "" if value is None else str(value).strip()
-        return "" if text == "0" else text
-
-    @staticmethod
     def zeige_login_menu():
         print("\n\033[01mLogin\033[0m")
         print("1. Login")
@@ -15,7 +10,7 @@ class CLIView:
 
     @staticmethod
     def zeige_hauptmenu(vorname: str, name: str):
-        vorname = CLIView._clean_name_part(vorname)
+        vorname = vorname.strip() if vorname is not None else ""
         if vorname:
             print(f"\n\033[01mWillkommen {vorname}\033[0m")
         else:

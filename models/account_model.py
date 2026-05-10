@@ -1,5 +1,6 @@
 """Domänenmodell für Profil- und Lohnverwaltung."""
 
+import re
 from datetime import datetime
 from typing import Optional, Tuple
 
@@ -7,10 +8,11 @@ from typing import Optional, Tuple
 class AccountModel:
     """Reine Modelllogik für Änderungen an Kontodaten."""
 
-    @staticmethod
-    def _clean_name_part(value) -> str:
-        text = "" if value is None else str(value).strip()
-        return "" if text == "0" else text
+    NAME_PATTERN = re.compile(r"^[A-Za-zÄÖÜäöüß]+(?:-[A-Za-zÄÖÜäöüß]+)*$")
+
+    @classmethod
+    def _is_valid_name(cls, value: str) -> bool:
+        return bool(cls.NAME_PATTERN.fullmatch(value.strip()))
 
     @staticmethod
     def ensure_salary_list(user_data: dict) -> None:
@@ -19,11 +21,9 @@ class AccountModel:
 
     @staticmethod
     def profile_data(user_data: dict) -> dict:
-        vorname = AccountModel._clean_name_part(user_data.get("vorname"))
-        nachname = AccountModel._clean_name_part(user_data.get("name"))
         return {
-            "vorname": vorname,
-            "name": nachname,
+            "vorname": user_data.get("vorname", ""),
+            "name": user_data.get("name", ""),
             "email": user_data.get("email", "-"),
             "lohn": user_data.get("lohn", []),
         }
@@ -31,16 +31,20 @@ class AccountModel:
     @staticmethod
     def change_firstname(user_data: dict, value: str) -> Tuple[bool, str]:
         value = value.strip()
-        if not value or value == "0":
+        if not value:
             return False, "Vorname darf nicht leer sein."
+        if not AccountModel._is_valid_name(value):
+            return False, "Vorname darf nur Buchstaben und Bindestriche enthalten."
         user_data["vorname"] = value
         return True, "Vorname erfolgreich geändert."
 
     @staticmethod
     def change_lastname(user_data: dict, value: str) -> Tuple[bool, str]:
         value = value.strip()
-        if not value or value == "0":
+        if not value:
             return False, "Nachname darf nicht leer sein."
+        if not AccountModel._is_valid_name(value):
+            return False, "Nachname darf nur Buchstaben und Bindestriche enthalten."
         user_data["name"] = value
         return True, "Nachname erfolgreich geändert."
 

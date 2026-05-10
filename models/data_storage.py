@@ -94,7 +94,8 @@ class DataHandler:
 
         # Migration alter Dateien
         if "accounts" not in daten:
-            email = daten.get("benutzer_passwort", {}).get("email", "unknown@example.com")
+            email = daten.get("benutzer_passwort", {}).get(
+                "email", "unknown@example.com")
 
             migrated = {
                 email: {
@@ -111,13 +112,7 @@ class DataHandler:
             self._speichern(migrated)
             return migrated
 
-        accounts = daten["accounts"]
-        for user_data in accounts.values():
-            if user_data.get("vorname") == "0":
-                user_data["vorname"] = ""
-            if user_data.get("name") == "0":
-                user_data["name"] = ""
-        return accounts
+        return daten["accounts"]
 
     # ---------------------------------------------------------
     # Öffentliche Methode: Speichern
