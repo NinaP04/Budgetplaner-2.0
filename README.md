@@ -131,8 +131,9 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 - Ausgabe von Statistik (Visualisierung) als PGN-Datei (finanzziele_diagramm.png & monats_summen_diagramm.png
 
 **Actors**
-- Customer (plans his budget)
-- 
+- Benutzer (plant sein Budget)
+- System/Timer (führt Auto-Logout bei Inaktivität aus)
+- Datenspeicher/Dateisystem (sichert Benutzerdaten)
 ---
 
 ### Wireframes / Mockups
@@ -168,11 +169,9 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 - Use and interaction of modules to minimize dependencies, by minimizing cohesion and maximizing coupling
 - Keep business rules testable without starting the UI
 
-**Design patterns used (examples):**
-- MVC (Model–View–Controller)
-- Repository/DAO for database access (e.g. `queries.py`)
-- Strategy for business rules (e.g. discount calculation)
-- Adapter for external services (e.g. invoice generation backend)
+**Design patterns used**
+- Model–View–Controller: Wir haben uns für das MVC-Pattern entschieden, weil dieses die Anwendung klar zwischen Datenlogik, Benutzereingabe & -ausgabe und Ablaufsteuerung trennt. Die Business Logik bleibt somit testbar und das UI ist jederzeit austauschbar.
+
 
 ---
 
