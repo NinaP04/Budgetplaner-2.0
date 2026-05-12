@@ -75,11 +75,16 @@ class DataHandler:
         ]
     }
 
-    # ---------------------------------------------------------
-    # Konstruktor
-    # ---------------------------------------------------------
+    _instance: "DataHandler | None" = None
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+            cls._instance.accounts = cls._instance._laden()
+        return cls._instance
+
     def __init__(self):
-        self.accounts = self._laden()
+        pass  # accounts already set by __new__
 
     # ---------------------------------------------------------
     # Private Methode: Laden

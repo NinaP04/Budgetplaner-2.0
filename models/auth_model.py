@@ -59,16 +59,8 @@ class AuthModel:
             "name": "",
             "passwort": None,
             "budget_kategorien": {
-                "Haushalt": [
-                    "01.01.2026 - Lebensmittel - 50 CHF",
-                    "05.01.2026 - Reinigung - 20 CHF",
-                    "10.01.2026 - Hygiene - 15 CHF",
-                ],
-                "Freizeit": [
-                    "03.01.2026 - Kino - 18 CHF",
-                    "07.01.2026 - Restaurant - 45 CHF",
-                    "12.01.2026 - Bowling - 25 CHF",
-                ],
+                "Haushalt": [],
+                "Freizeit": [],
             },
             "budget_limits": {
                 "Haushalt": 500,

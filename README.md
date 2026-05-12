@@ -29,80 +29,70 @@ This project is intended to:
 
 ---
 
-### Problem
+### Problem :
 Als Teilzeit-Student gibt es viele Dinge die man zu erledigen hat und zu welchen man einen Überblick behalten soll. Es kann schnell passieren, dass man etwas aus den Augen verliert.
 
 ---
 
-### Scenario
-Die Anwendung ermöglicht den Nutzenden:
-- Einnahmen und Ausgaben pro Kategorie zu erfassen und zu verwalten
-- Budgetkategorien anzulegen und Budgetlimits pro Kategorie zu setzen
-- Warnungen bei Budgetüberschreitungen zu erhalten
-- Monatswerte mit Vormonaten zu vergleichen
-- ihre Daten sicher zu speichern und beim nächsten Start weiterzuverwenden
+### Scenario: 
+Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von überall einen Einblick in Ihre Finanzen erhalten. Mit diesen Informationen können Sie laufend Ihr Budget entsprechend der Situation anpassen.
+
+-
+-
 
 ---
 
 ## 📖 User Stories
 
-### 1. Gesicherter Login
+### 1. 
 **Als User möchte ich, dass die Browser App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).**
-
-- **Inputs:** E-Mail, Passwort (max. 3 Versuche) 
-- **Outputs:** Erfolgreicher Login, Fehlermeldung bei falschem Passwort
-
----
-
-### 2. Passwort ändern
-**Als User möchte ich jederzeit mein Passwort in der App ändern können.**
-
-- **Inputs:** Aktuelles Passwort (falls vorhanden), neues Passwort, Passwort-Bestätigung
-- **Outputs:** Passwort wird nach Regelprüfung gehasht gespeichert (bcrypt) und Erfolgsmeldung ausgegeben oder Fehlermeldung bei Regelverletzung
-
----
-
-### 3. Auto-Logout bei Inaktivität
-**Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.**
-
-- **Inputs:** Keine Eingabe innerhalb des Timeout-Timer
-- **Outputs:** Automatischer Logout-Hinweis, Daten werden gespeichert, Anwendung wird beendet
-
----
-
-### 4. Einnahmen erfassen und verwalten
-**Als User möchte ich, meine Einnahmen erfassen und bearbeiten können.**
-
-- **Inputs:** Kategorie wählen, Einnahme wählen, Datum (`DD.MM.YYYY` oder `.` für heute), Art und Betrag in CHF erfassen
-- **Outputs:** Einnahme wird als positiver Betrag gespeichert; vorhandene Einträge können bearbeitet und gelöscht werden
-
----
-
-### 5. Ausgaben erfassen und verwalten
-**Als User möchte ich, meine Ausgaben erfassen und bearbeiten können.**
-
-- **Inputs:** Kategorie wählen, Ausgabe wählen, Datum (`DD.MM.YYYY` oder `.` für heute), Art und Betrag in CHF erfassen
-- **Outputs:** Ausgabe wird als negativer Betrag gespeichert; vorhandene Einträge können bearbeitet und gelöscht werden
-
----
-
-### 6. Budget-Kategorien verwalten
-**Als User möchte ich  mein Budget in mehrere (Limit von X) anpassbare Kategorien unterteilen können, um den Überblick zu behalten.**
 
 - **Inputs:** 
 - **Outputs:** 
 
 ---
 
-### 7. Budgetlimit pro Kategorie festlegen
-**Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können.**
+### 2. 
+**Als User möchte ich jederzeit mein Passwort in der App ändern können.**
 
-- **Inputs:** Kategorie auswählen, Aktion auswählen und Limitbetrag in CHF erfassen
-- **Outputs:** Limit wird pro Kategorie gespeichert, angezeigt, aktualisiert oder entfernt; ungueltige Betraege werden abgewiesen (max. 2000 CHF)
+- **Inputs:** 
+- **Outputs:** 
 
 ---
 
-### 8. Warnung bei Limitüberschreitung
+### 3. 
+**Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.**
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 4. 
+**Als User möchte ich, meine Einnahmen und Ausgaben erfassen und bearbeiten können.**
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 5. 
+**Als User möchte ich  mein Budget in mehrere (Limit auf 5) anpassbare Kategorien unterteilen können, um den Überblick zu behalten.**
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 6. 
+**Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können.**
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 7. 
 **Als User möchte ich eine Warnung erhalten, wenn ich mein Budgetlimit überschritten habe.** 
 
 - **Inputs:** 
@@ -110,11 +100,11 @@ Die Anwendung ermöglicht den Nutzenden:
 
 ---
 
-### 9. Statistik anzeigen
+### 8. 
 **Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.**
 
-- **Inputs:** Statistik-Menü,  Monatsstatistik wählen
-- **Outputs:** Balkendiagramm mit Vergleich Vormonat vs. aktueller Monat pro Kategorie inklusive Wertebeschriftung
+- **Inputs:** 
+- **Outputs:** 
 
 ---
 
@@ -133,9 +123,8 @@ Die Anwendung ermöglicht den Nutzenden:
 - Ausgabe von Statistik (Visualisierung) als PGN-Datei (finanzziele_diagramm.png & monats_summen_diagramm.png
 
 **Actors**
-- Benutzer (plant sein Budget)
-- System/Timer (führt Auto-Logout bei Inaktivität aus)
-- Datenspeicher/Dateisystem (sichert Benutzerdaten)
+- Customer (plans his budget)
+- 
 ---
 
 ### Wireframes / Mockups
@@ -171,9 +160,11 @@ Die Anwendung ermöglicht den Nutzenden:
 - Use and interaction of modules to minimize dependencies, by minimizing cohesion and maximizing coupling
 - Keep business rules testable without starting the UI
 
-**Design patterns used**
-- Model–View–Controller: Wir haben uns für das MVC-Pattern entschieden, weil dieses die Anwendung klar zwischen Datenlogik, Benutzereingabe & -ausgabe und Ablaufsteuerung trennt. Die Business Logik bleibt somit testbar und das UI ist jederzeit austauschbar.
-
+**Design patterns used (examples):**
+- MVC (Model–View–Controller)
+- Repository/DAO for database access (e.g. `queries.py`)
+- Strategy for business rules (e.g. discount calculation)
+- Adapter for external services (e.g. invoice generation backend)
 
 ---
 
@@ -215,16 +206,13 @@ Each app must meet the following criteria in order to be accepted (see also the 
 
 > 🚧 In this section, document how your project fulfills each criterion.
 
-Der Benutzer interagiert via Browser mit der Anwendung. Der Benutzer kann: 
+The application interacts with the user via the browser. Users can:
 
 - Hauptmenü / Dashboard anzeigen
-- Einnahmen und Ausgaben erfassen
-- Bereits erfasste Einnahmen und Ausgaben bearbeiten oder löschen
-- Budget-Kategorien erstellen und verwalten (maximal 5 Kategorien)
-- Pro Kategorie Budgetlimits setzen und anpassen
-- Warnungen bei Überschreitung von Budgetlimits erhalten
-- Statistiken anzeigen und Monatswerte vergleichen
-- Passwort ändern und bei Inaktivität automatisch ausgelogt werden
+- 
+- Select pizzas and quantities
+- See the running total
+- Receive an invoice generated as a file
 
 **Architecture note (per SS26 guidelines):** the browser is a thin client; UI state + business logic live on the server-side NiceGUI app.
 
@@ -266,9 +254,6 @@ Alle relevanten Daten werden via ORM () gemanaged. Für FinFlow beeihaltet das B
 - **pytest** – testing  
 - **pytest-cov** – coverage  
 
-- **bcrypt** - Password-Hashing
-- **matplotlib** - Diagramm generation
-- **numpy**** - help function for statistic
 ---
 
 ### 📂 Repository Structure
@@ -346,26 +331,13 @@ budgetplaner/
 
 ### 4. Usage (document as steps)
 
-FinFlow nutzen (Hauptfunktionen)
-1. Anmeldung und Sicherheit
-   - App starten und mit dem bestehenden Passwort anmelden (Erstpasswort: `Test1234!`).
-   - Bei Bedarf das Passwort in der App ändern.
-   - Bei längerer Inaktivität erfolgt ein automatischer Logout.
-2. Einnahmen und Ausgaben verwalten:
-   - Neue Einnahmen und Ausgaben mit Betrag und Bezeichnung erfassen.
-   - Vorhandene Einträge bearbeiten oder löschen.
-3. Budget-Kategorien verwalten:
-   - Bis zu 5 Kategorien anlegen, um Finanzen strukturiert zu trennen.
-   - Pro Kategorie ein Budgetlimit setzen und bei Bedarf anpassen.
-4. Budgetkontrolle und Warnungen:
-   - Ausgaben je Kategorie mit dem gesetzten Limit vergleichen.
-   - Bei Überschreitung eines Limits wird eine Warnung ausgegeben.
-5. Statistik und Monatsvergleich:
-   - FinanzÜbersichten und Statistiken aufrufen.
-   - Aktuelle Monatswerte mit Vormonaten vergleichen.
-6. Daten sichern und beenden:
-   - Änderungen werden dauerhaft gespeichert.
-   - App über die Beenden-Funktion sauber schliessen.
+> 🚧 Describe the usage of the main functions
+
+Order Pizza:
+1. Open the menu page and browse pizzas.
+2. Add items (with quantities) to the current order.
+3. Review total (incl. discounts) and validate inputs.
+4. Checkout to persist the order and generate the invoice.
 
 > 🚧 Add UI screenshots of the main screens (or a short video link):
 
@@ -390,6 +362,13 @@ pytest
 > 🚧 If you provide separate commands, document them here (e.g. `pytest -m integration`).
 
 ---
+
+### Libraries Used
+
+- nicegui
+- sqlalchemy / sqlmodel
+- pydantic
+- ...
 
 ## 👥 Team & Contributions
 
