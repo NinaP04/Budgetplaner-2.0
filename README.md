@@ -29,12 +29,12 @@ This project is intended to:
 
 ---
 
-### Problem :
+### Problem
 Als Teilzeit-Student gibt es viele Dinge die man zu erledigen hat und zu welchen man einen Überblick behalten soll. Es kann schnell passieren, dass man etwas aus den Augen verliert.
 
 ---
 
-### Scenario:
+### Scenario
 Die Anwendung ermöglicht den Nutzenden:
 - Einnahmen und Ausgaben pro Kategorie zu erfassen und zu verwalten
 - Budgetkategorien anzulegen und Budgetlimits pro Kategorie zu setzen
