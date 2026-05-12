@@ -37,25 +37,84 @@ Als Teilzeit-Student gibt es viele Dinge die man zu erledigen hat und zu welchen
 ### Scenario: 
 Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von überall einen Einblick in Ihre Finanzen erhalten. Mit diesen Informationen können Sie laufend Ihr Budget entsprechend der Situation anpassen.
 
-### User stories:
-1. Als User möchte ich, dass die App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).
-2. Als User möchte ich jederzeit mein Passwort in der App ändern können.
-3. Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.
-4. Als User möchte ich, meine Einnahmen und Ausgaben erfassen & anpassen können.
-5. Als User möchte ich mein Budget in mehrere (Limit auf 5) anpassbare Kategorien unterteilen, um den Überblick zu behalten. 
-6. Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können. 
-7. Als User möchte ich eine Warnung erhalten, wenn ich mein Budget überschreite. 
-8. Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.
+-
+-
 
 ---
 
-### Use cases
+## 📖 User Stories
+
+### 1. 
+**Als User möchte ich, dass die Browser App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 2. 
+**Als User möchte ich jederzeit mein Passwort in der App ändern können.
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 3. 
+**Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 4. 
+**Als User möchte ich, meine Einnahmen und Ausgaben erfassen und bearbeiten können.
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 5. 
+**Als User möchte ich  mein Budget in mehrere (Limit auf 5) anpassbare Kategorien unterteilen können, um den Überblick zu behalten. 
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 6. 
+**Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können. 
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 7. 
+**Als User möchte ich eine Warnung erhalten, wenn ich mein Budgetlimit überschritten habe. 
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 8. 
+**Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+## 🧩 Use Cases
 
 > 🚧 Name actors and briefly describe each use case. Ideally, a UML use case diagram specifies use cases and relationships.
 
 ![UML Use Case Diagram](docs/architecture-diagrams/uml_use_case_diagram.png)
 
-**Use cases**
+### Main Use Cases
 - Hauptmenü anzeigen (Bedienung aller Funktionen)
 - Budget-Kategorien verwalten (Kategorien und Einträge anzeigen, erstellen, bearbeiten und löschen)
 - Finanzkontrolle pro Kategorie (Budgetlimit und Sparziel setzen, anzeigen, ändern, entfernen)
