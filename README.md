@@ -69,7 +69,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 4. 
-**Als User möchte ich, meine Einnahmen und Ausgaben erfassen und bearbeiten können.**
+**Als User möchte ich, meine Einnahmen erfassen und bearbeiten können.**
 
 - **Inputs:** 
 - **Outputs:** 
@@ -77,7 +77,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 5. 
-**Als User möchte ich  mein Budget in mehrere (Limit auf 5) anpassbare Kategorien unterteilen können, um den Überblick zu behalten.**
+**Als User möchte ich, meine Ausgaben erfassen und bearbeiten können.**
 
 - **Inputs:** 
 - **Outputs:** 
@@ -85,7 +85,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 6. 
-**Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können.**
+**Als User möchte ich  mein Budget in mehrere (Limit auf 5) anpassbare Kategorien unterteilen können, um den Überblick zu behalten.**
 
 - **Inputs:** 
 - **Outputs:** 
@@ -93,7 +93,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 7. 
-**Als User möchte ich eine Warnung erhalten, wenn ich mein Budgetlimit überschritten habe.** 
+**Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können.**
 
 - **Inputs:** 
 - **Outputs:** 
@@ -101,6 +101,14 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 8. 
+**Als User möchte ich eine Warnung erhalten, wenn ich mein Budgetlimit überschritten habe.** 
+
+- **Inputs:** 
+- **Outputs:** 
+
+---
+
+### 9. 
 **Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.**
 
 - **Inputs:** 
@@ -333,11 +341,26 @@ budgetplaner/
 
 > 🚧 Describe the usage of the main functions
 
-Order Pizza:
-1. Open the menu page and browse pizzas.
-2. Add items (with quantities) to the current order.
-3. Review total (incl. discounts) and validate inputs.
-4. Checkout to persist the order and generate the invoice.
+FinFlow nutzen (Hauptfunktionen):
+1. Anmeldung und Sicherheit:
+   - App starten und mit dem bestehenden Passwort anmelden (Erstpasswort: `Test1234!`).
+   - Bei Bedarf das Passwort in der App ändern.
+   - Bei längerer Inaktivität erfolgt ein automatischer Logout.
+2. Einnahmen und Ausgaben verwalten:
+   - Neue Einnahmen und Ausgaben mit Betrag und Bezeichnung erfassen.
+   - Vorhandene Einträge bearbeiten oder löschen.
+3. Budget-Kategorien verwalten:
+   - Bis zu 5 Kategorien anlegen, um Finanzen strukturiert zu trennen.
+   - Pro Kategorie ein Budgetlimit setzen und bei Bedarf anpassen.
+4. Budgetkontrolle und Warnungen:
+   - Ausgaben je Kategorie mit dem gesetzten Limit vergleichen.
+   - Bei Überschreitung eines Limits wird eine Warnung ausgegeben.
+5. Statistik und Monatsvergleich:
+   - FinanzÜbersichten und Statistiken aufrufen.
+   - Aktuelle Monatswerte mit Vormonaten vergleichen.
+6. Daten sichern und beenden:
+   - Änderungen werden dauerhaft gespeichert.
+   - App über die Beenden-Funktion sauber schliessen.
 
 > 🚧 Add UI screenshots of the main screens (or a short video link):
 
