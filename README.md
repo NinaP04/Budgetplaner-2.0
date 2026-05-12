@@ -176,7 +176,17 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 
 **ORM and Entities (example):** In the database, order are stored in ... that are mapped an `Order` entity. The `Order` ↔ `OrderItem` relationship ... ensures that an `Order` has at least one `OrderItem` and an `OrderItem` always relates to an `Order`.
 
+### Entities
+- `X`
+- `Y`
+- `Z`
+
+### Relationships
+- One `Order` → many `OrderItem`
+- Each `OrderItem` references one `Pizza`
+
 ---
+
 
 ## ✅ Project Requirements
 
@@ -217,7 +227,8 @@ These checks prevent crashes and guide the user to provide correct input, matchi
 
 ### 3. Database Management
 
-All relevant data is managed via an ORM (e.g. SQLModel or SQLAlchemy). For the pizza example this includes users, pizzas, and orders.
+All relevant data is managed via an ORM (e.g. SQLModel or SQLAlchemy). For the pizza example this includes users, pizzas, and orders. 
+Alle relevanten Daten werden via ORM () gemanaged. Für FinFlow beeihaltet das Benutzer, ...
 
 ---
 
