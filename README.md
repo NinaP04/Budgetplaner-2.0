@@ -45,8 +45,6 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 7. Als User möchte ich eine Warnung erhalten, wenn ich mein Budget überschreite. 
 8. Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.
 
-
-
 ---
 
 ### Use cases
@@ -56,22 +54,16 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ![UML Use Case Diagram](docs/architecture-diagrams/uml_use_case_diagram.png)
 
 **Use cases**
-Hauptmenü anzeigen (Bedienung aller Funktionen)
-Budget-Kategorien verwalten (Kategorien und Einträge anzeigen, erstellen, bearbeiten und löschen)
-Finanzkontrolle pro Kategorie (Budgetlimit und Sparziel setzen, anzeigen, ändern, entfernen)
-Passwort ändern (Benutzerpasswort aktualisieren, Sicherheitsregeln prüfen)
-Daten speichern und Programm beenden (Eingaben werden dauerhaft gesichert und das Programm wird sauber beendet)
-Ausgabe von Statistik (Visualisierung) als PGN-Datei (finanzziele_diagramm.png & monats_summen_diagramm.png
-
-- Show Menu (Customer)
-- Create Order / Add Items (Customer)
-- Show Current Order and Total (Customer)
-- Checkout & Print Invoice (Staff) → generates `invoice_xxx.pdf`
-- View Past Transactions (Admin)
+- Hauptmenü anzeigen (Bedienung aller Funktionen)
+- Budget-Kategorien verwalten (Kategorien und Einträge anzeigen, erstellen, bearbeiten und löschen)
+- Finanzkontrolle pro Kategorie (Budgetlimit und Sparziel setzen, anzeigen, ändern, entfernen)
+- Passwort ändern (Benutzerpasswort aktualisieren, Sicherheitsregeln prüfen)
+- Daten speichern und Programm beenden (Eingaben werden dauerhaft gesichert und das Programm wird sauber beendet)
+- Ausgabe von Statistik (Visualisierung) als PGN-Datei (finanzziele_diagramm.png & monats_summen_diagramm.png
 
 **Actors**
 - Customer (plans his budget)
-
+- 
 ---
 
 ### Wireframes / Mockups
@@ -145,7 +137,8 @@ Each app must meet the following criteria in order to be accepted (see also the 
 
 The application interacts with the user via the browser. Users can:
 
-- View the pizza menu
+- Hauptmenü / Dashboard anzeigen
+- 
 - Select pizzas and quantities
 - See the running total
 - Receive an invoice generated as a file
@@ -216,6 +209,8 @@ budgetplaner/
 │
 ├── main.py               # Entry-Point
 └── budget_daten.json
+```
+
 ---
 
 ### How to Run
