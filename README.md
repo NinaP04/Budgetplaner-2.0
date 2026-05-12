@@ -34,11 +34,13 @@ Als Teilzeit-Student gibt es viele Dinge die man zu erledigen hat und zu welchen
 
 ---
 
-### Scenario: 
-Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von überall einen Einblick in Ihre Finanzen erhalten. Mit diesen Informationen können Sie laufend Ihr Budget entsprechend der Situation anpassen.
-
--
--
+### Scenario:
+Die Anwendung ermöglicht den Nutzenden:
+- Einnahmen und Ausgaben pro Kategorie zu erfassen und zu verwalten
+- Budgetkategorien anzulegen und Budgetlimits pro Kategorie zu setzen
+- Warnungen bei Budgetüberschreitungen zu erhalten
+- Monatswerte mit Vormonaten zu vergleichen
+- ihre Daten sicher zu speichern und beim nächsten Start weiterzuverwenden
 
 ---
 
