@@ -45,7 +45,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ## 📖 User Stories
 
 ### 1. 
-**Als User möchte ich, dass die Browser App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).
+**Als User möchte ich, dass die Browser App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).**
 
 - **Inputs:** 
 - **Outputs:** 
@@ -53,7 +53,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 2. 
-**Als User möchte ich jederzeit mein Passwort in der App ändern können.
+**Als User möchte ich jederzeit mein Passwort in der App ändern können.**
 
 - **Inputs:** 
 - **Outputs:** 
@@ -61,7 +61,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 3. 
-**Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.
+**Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.**
 
 - **Inputs:** 
 - **Outputs:** 
@@ -69,7 +69,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 4. 
-**Als User möchte ich, meine Einnahmen und Ausgaben erfassen und bearbeiten können.
+**Als User möchte ich, meine Einnahmen und Ausgaben erfassen und bearbeiten können.**
 
 - **Inputs:** 
 - **Outputs:** 
@@ -77,7 +77,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 5. 
-**Als User möchte ich  mein Budget in mehrere (Limit auf 5) anpassbare Kategorien unterteilen können, um den Überblick zu behalten. 
+**Als User möchte ich  mein Budget in mehrere (Limit auf 5) anpassbare Kategorien unterteilen können, um den Überblick zu behalten.**
 
 - **Inputs:** 
 - **Outputs:** 
@@ -85,7 +85,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 6. 
-**Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können. 
+**Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können.**
 
 - **Inputs:** 
 - **Outputs:** 
@@ -93,7 +93,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 7. 
-**Als User möchte ich eine Warnung erhalten, wenn ich mein Budgetlimit überschritten habe. 
+**Als User möchte ich eine Warnung erhalten, wenn ich mein Budgetlimit überschritten habe.** 
 
 - **Inputs:** 
 - **Outputs:** 
@@ -101,7 +101,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ---
 
 ### 8. 
-**Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.
+**Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.**
 
 - **Inputs:** 
 - **Outputs:** 
