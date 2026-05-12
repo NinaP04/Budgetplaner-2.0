@@ -47,45 +47,45 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ### 1. 
 **Als User möchte ich, dass die Browser App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).**
 
-- **Inputs:** 
-- **Outputs:** 
+- **Inputs:** E-Mail, Passwort (max. 3 Versuche) 
+- **Outputs:** Erfolgreicher Login, Fehlermeldung bei falschem Passwort
 
 ---
 
 ### 2. 
 **Als User möchte ich jederzeit mein Passwort in der App ändern können.**
 
-- **Inputs:** 
-- **Outputs:** 
+- **Inputs:** Aktuelles Passwort (falls vorhanden), neues Passwort, Passwort-Bestätigung
+- **Outputs:** Passwort wird nach Regelprüfung gehasht gespeichert (bcrypt) und Erfolgsmeldung ausgegeben oder Fehlermeldung bei Regelverletzung
 
 ---
 
 ### 3. 
 **Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.**
 
-- **Inputs:** 
-- **Outputs:** 
+- **Inputs:** Keine Eingabe innerhalb des Timeout-Timer
+- **Outputs:** Automatischer Logout-Hinweis, Daten werden gespeichert, Anwendung wird beendet
 
 ---
 
 ### 4. 
 **Als User möchte ich, meine Einnahmen erfassen und bearbeiten können.**
 
-- **Inputs:** 
-- **Outputs:** 
+- **Inputs:** Kategorie wählen, Einnahme wählen, Datum (`DD.MM.YYYY` oder `.` für heute), Art und Betrag in CHF erfassen
+- **Outputs:** Einnahme wird als positiver Betrag gespeichert; vorhandene Einträge können bearbeitet und gelöscht werden
 
 ---
 
 ### 5. 
 **Als User möchte ich, meine Ausgaben erfassen und bearbeiten können.**
 
-- **Inputs:** 
-- **Outputs:** 
+- **Inputs:** Kategorie wählen, Ausgabe wählen, Datum (`DD.MM.YYYY` oder `.` für heute), Art und Betrag in CHF erfassen
+- **Outputs:** Ausgabe wird als negativer Betrag gespeichert; vorhandene Einträge können bearbeitet und gelöscht werden
 
 ---
 
 ### 6. 
-**Als User möchte ich  mein Budget in mehrere (Limit auf 5) anpassbare Kategorien unterteilen können, um den Überblick zu behalten.**
+**Als User möchte ich  mein Budget in mehrere (Limit von X) anpassbare Kategorien unterteilen können, um den Überblick zu behalten.**
 
 - **Inputs:** 
 - **Outputs:** 
@@ -95,8 +95,8 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ### 7. 
 **Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können.**
 
-- **Inputs:** 
-- **Outputs:** 
+- **Inputs:** Kategorie auswählen, Aktion auswählen und Limitbetrag in CHF erfassen
+- **Outputs:** Limit wird pro Kategorie gespeichert, angezeigt, aktualisiert oder entfernt; ungueltige Betraege werden abgewiesen (max. 2000 CHF)
 
 ---
 
@@ -111,8 +111,8 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 ### 9. 
 **Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.**
 
-- **Inputs:** 
-- **Outputs:** 
+- **Inputs:** Statistik-Menü,  Monatsstatistik wählen
+- **Outputs:** Balkendiagramm mit Vergleich Vormonat vs. aktueller Monat pro Kategorie inklusive Wertebeschriftung
 
 ---
 
@@ -214,13 +214,16 @@ Each app must meet the following criteria in order to be accepted (see also the 
 
 > 🚧 In this section, document how your project fulfills each criterion.
 
-The application interacts with the user via the browser. Users can:
+Der Benutzer interagiert via Browser mit der Anwendung. Der Benutzer kann: 
 
 - Hauptmenü / Dashboard anzeigen
-- 
-- Select pizzas and quantities
-- See the running total
-- Receive an invoice generated as a file
+- Einnahmen und Ausgaben erfassen
+- Bereits erfasste Einnahmen und Ausgaben bearbeiten oder löschen
+- Budget-Kategorien erstellen und verwalten (maximal 5 Kategorien)
+- Pro Kategorie Budgetlimits setzen und anpassen
+- Warnungen bei Überschreitung von Budgetlimits erhalten
+- Statistiken anzeigen und Monatswerte vergleichen
+- Passwort ändern und bei Inaktivität automatisch ausgelogt werden
 
 **Architecture note (per SS26 guidelines):** the browser is a thin client; UI state + business logic live on the server-side NiceGUI app.
 
@@ -262,6 +265,9 @@ Alle relevanten Daten werden via ORM () gemanaged. Für FinFlow beeihaltet das B
 - **pytest** – testing  
 - **pytest-cov** – coverage  
 
+- **bcrypt** - Password-Hashing
+- **matplotlib** - Diagramm generation
+- **numpy**** - help function for statistic
 ---
 
 ### 📂 Repository Structure
@@ -339,10 +345,8 @@ budgetplaner/
 
 ### 4. Usage (document as steps)
 
-> 🚧 Describe the usage of the main functions
-
-FinFlow nutzen (Hauptfunktionen):
-1. Anmeldung und Sicherheit:
+FinFlow nutzen (Hauptfunktionen)
+1. Anmeldung und Sicherheit
    - App starten und mit dem bestehenden Passwort anmelden (Erstpasswort: `Test1234!`).
    - Bei Bedarf das Passwort in der App ändern.
    - Bei längerer Inaktivität erfolgt ein automatischer Logout.
@@ -385,13 +389,6 @@ pytest
 > 🚧 If you provide separate commands, document them here (e.g. `pytest -m integration`).
 
 ---
-
-### Libraries Used
-
-- nicegui
-- sqlalchemy / sqlmodel
-- pydantic
-- ...
 
 ## 👥 Team & Contributions
 
