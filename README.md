@@ -400,8 +400,8 @@ pytest
 | Präsentation aufsetzen & Planen | 12.05.2026 | Nina | |
 | 2 Coaching | 12.05.2026 | alle | REadme zeigen und Feedback einholen |
 | Umsetzen von noch offenen Anliegen | 22.05.2026 | alle | |
-| Finale Abgabe | 31.05.2026 | Nina | Präsi als PDF & GitHub-Link |
-| Präsentation | 26.05 - 02.06.2026 |  alle | * |
+| Finale Abgabe | 24.05.2026 | Nina | Präsi als PDF & GitHub-Link |
+| Präsentation | 02.06.2026 |  alle | * |
 
 ---
 
