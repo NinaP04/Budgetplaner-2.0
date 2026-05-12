@@ -172,6 +172,18 @@ All relevant data is managed via an ORM (e.g. SQLModel or SQLAlchemy). For the p
 
 ---
 
+### 📚 Libraries Used
+
+- **nicegui** – UI framework  
+- **sqlmodel** – ORM  
+- **sqlalchemy** – database toolkit  
+- **reportlab** – PDF generation  
+- **python-dotenv** – configuration  
+- **pytest** – testing  
+- **pytest-cov** – coverage  
+
+---
+
 ### 📂 Repository Structure
 
 ```text
