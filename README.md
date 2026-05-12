@@ -44,7 +44,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 
 ## 📖 User Stories
 
-### 1. 
+### 1. Gesicherter Login
 **Als User möchte ich, dass die Browser App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).**
 
 - **Inputs:** E-Mail, Passwort (max. 3 Versuche) 
@@ -52,7 +52,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 
 ---
 
-### 2. 
+### 2. Passwort ändern
 **Als User möchte ich jederzeit mein Passwort in der App ändern können.**
 
 - **Inputs:** Aktuelles Passwort (falls vorhanden), neues Passwort, Passwort-Bestätigung
@@ -60,7 +60,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 
 ---
 
-### 3. 
+### 3. Auto-Logout bei Inaktivität
 **Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.**
 
 - **Inputs:** Keine Eingabe innerhalb des Timeout-Timer
@@ -68,7 +68,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 
 ---
 
-### 4. 
+### 4. Einnahmen erfassen und verwalten
 **Als User möchte ich, meine Einnahmen erfassen und bearbeiten können.**
 
 - **Inputs:** Kategorie wählen, Einnahme wählen, Datum (`DD.MM.YYYY` oder `.` für heute), Art und Betrag in CHF erfassen
@@ -76,7 +76,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 
 ---
 
-### 5. 
+### 5. Ausgaben erfassen und verwalten
 **Als User möchte ich, meine Ausgaben erfassen und bearbeiten können.**
 
 - **Inputs:** Kategorie wählen, Ausgabe wählen, Datum (`DD.MM.YYYY` oder `.` für heute), Art und Betrag in CHF erfassen
@@ -84,7 +84,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 
 ---
 
-### 6. 
+### 6. Budget-Kategorien verwalten
 **Als User möchte ich  mein Budget in mehrere (Limit von X) anpassbare Kategorien unterteilen können, um den Überblick zu behalten.**
 
 - **Inputs:** 
@@ -92,7 +92,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 
 ---
 
-### 7. 
+### 7. Budgetlimit pro Kategorie festlegen
 **Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können.**
 
 - **Inputs:** Kategorie auswählen, Aktion auswählen und Limitbetrag in CHF erfassen
@@ -100,7 +100,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 
 ---
 
-### 8. 
+### 8. Warnung bei Limitüberschreitung
 **Als User möchte ich eine Warnung erhalten, wenn ich mein Budgetlimit überschritten habe.** 
 
 - **Inputs:** 
@@ -108,7 +108,7 @@ Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von
 
 ---
 
-### 9. 
+### 9. Statistik anzeigen
 **Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.**
 
 - **Inputs:** Statistik-Menü,  Monatsstatistik wählen
