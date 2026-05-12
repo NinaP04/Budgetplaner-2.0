@@ -1,6 +1,6 @@
 ---
 
-# 🍕 PizzaRP – Pizzeria Reference Project (Browser App)
+# FinFlow - Budgetplaner (Browser App)
 
 ---
 
