@@ -1,121 +1,143 @@
----
-
 # 🍕 PizzaRP – Pizzeria Reference Project (Browser App)
-
----
 
 ![UI Showcase](docs/ui-images/ui_showcase.png)
 
 ---
 
-This project is intended to:
+This project demonstrates the development of a browser-based application using **NiceGUI**, focusing on clean architecture, data validation, and database integration via an ORM.
 
-- Practice the complete process from **application requirements analysis to implementation**
-- Apply advanced **Python** concepts in a browser-based application (NiceGUI)
-- Demonstrate **data validation**, a clean architecture (presentation / application logic / persistence), and **database access via ORM**
-- Produce clean, well-structured, and documented code (incl. tests)
-- Prepare students for **teamwork and professional documentation**
-- Use this repository as a starting point by importing it into your own GitHub account  
-- Work only within your own copy — do not push to the original template  
-- Commit regularly to track your progress
+It aims to:
 
----
-
-# 🍕 TEMPLATE for documentation
+- Cover the full process from **requirements analysis to implementation**
+- Apply advanced **Python** concepts in a web-based application
+- Demonstrate **data validation**, layered architecture, and ORM usage
+- Produce clean, maintainable, and well-tested code
+- Support **teamwork and professional documentation**
 
 ---
 
 ## 📝 Application Requirements
 
----
+### Problem
 
-### Problem :
-Als Teilzeit-Student gibt es viele Dinge die man zu erledigen hat und zu welchen man einen Überblick behalten soll. Es kann schnell passieren, dass man etwas aus den Augen verliert.
-
-### Scenario: 
-Mit dem Budget-Planner im App-Format können Studiedierende ganz einfach und von überall einen Einblick in Ihre Finanzen erhalten. Mit diesen Informationen können Sie laufend Ihr Budget entsprechend der Situation anpassen.
-
-### User stories:
-1. Als User möchte ich, dass die App Passwort geschützt ist (Passwort bei Erstnutzung: Test1234!).
-2. Als User möchte ich jederzeit mein Passwort in der App ändern können.
-3. Als User möchte ich automatisch ausgeloggt werden bei Inaktivität.
-4. Als User möchte ich, meine Einnahmen und Ausgaben erfassen & anpassen können.
-5. Als User möchte ich mein Budget in mehrere (Limit auf 5) anpassbare Kategorien unterteilen, um den Überblick zu behalten. 
-6. Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können. 
-7. Als User möchte ich eine Warnung erhalten, wenn ich mein Budget überschreite. 
-8. Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können.
+In small pizzerias, orders and totals are often calculated manually. This leads to errors, inconsistent pricing, and incorrect discounts.
 
 ---
 
-### Use cases
+### Scenario
 
-> 🚧 Name actors and briefly describe each use case. Ideally, a UML use case diagram specifies use cases and relationships.
+The application allows users to:
+- select pizzas from a menu
+- manage their order
+- automatically calculate totals (including discounts)
+- store orders in a database
+- generate invoices as PDF files
+
+---
+
+## 📖 User Stories
+
+### 1. View Pizza Menu
+**As a user, I want to see the pizza menu in the browser app.**
+
+- **Inputs:** none  
+- **Outputs:** list of pizzas (`list[Pizza]`)
+
+---
+
+### 2. Manage Order and View Running Total
+**As a user, I want to add or remove pizzas and see the running total.**
+
+- **Inputs:** pizza ID (`int`), action (`add | remove`)  
+- **Outputs:** updated order, subtotal, discount, total  
+
+---
+
+### 3. Automatic Discount
+**As a user, I want a 10% discount applied automatically if the subtotal exceeds 50 CHF.**
+
+- **Inputs:** subtotal (`float`)  
+- **Outputs:** discount, total  
+
+---
+
+### 4. Generate Invoice
+**As a user, I want an invoice to be created and saved as a file.**
+
+- **Inputs:** completed order  
+- **Outputs:** PDF invoice, file path  
+
+---
+
+### 5. View Past Transactions (Admin)
+**As an admin, I want to view past transactions ordered by date.**
+
+- **Inputs:** optional limit (`int`)  
+- **Outputs:** list of orders (`list[Order]`)  
+
+---
+
+## 🧩 Use Cases
 
 ![UML Use Case Diagram](docs/architecture-diagrams/uml_use_case_diagram.png)
 
-**Use cases**
-- Hauptmenü anzeigen (Bedienung aller Funktionen)
-- Budget-Kategorien verwalten (Kategorien und Einträge anzeigen, erstellen, bearbeiten und löschen)
-- Finanzkontrolle pro Kategorie (Budgetlimit und Sparziel setzen, anzeigen, ändern, entfernen)
-- Passwort ändern (Benutzerpasswort aktualisieren, Sicherheitsregeln prüfen)
-- Daten speichern und Programm beenden (Eingaben werden dauerhaft gesichert und das Programm wird sauber beendet)
-- Ausgabe von Statistik (Visualisierung) als PGN-Datei (finanzziele_diagramm.png & monats_summen_diagramm.png
+### Main Use Cases
+- Show Menu (Customer)  
+- Manage Order (Customer)  
+- View Order and Total (Customer)  
+- Checkout & Generate Invoice (Customer)  
+- View Transactions (Admin)  
 
-**Actors**
-- Customer (plans his budget)
-- 
+### Actors
+- Customer  
+- Admin  
+
 ---
 
 ### Wireframes / Mockups
 
 > 🚧 Add screenshots of the wireframe mockups you chose to implement.
 
-![Wireframe – Home](docs/ui-images/wireframe_home.png)
-![Wireframe – Checkout](docs/ui-images/wireframe_checkout.png)
+![Wireframes – Home/Transactions](docs/ui-images/wireframes.png)
 
 ---
 
 ## 🏛️ Architecture
 
-> 🚧 Document the architecture components, relationships, and key design decisions.
-
-### Software Architecture
-
-> 🚧 Insert your UML class diagram(s). Split into multiple diagrams if needed.
-
 ![UML Class Diagram](docs/architecture-diagrams/uml_class_architecture.png)
 
-**Layers / components:**
-- UI (NiceGUI pages/components, browser as thin client)
-- Application logic (controllers + domain/services)
-- Persistence (SQLite + ORM entities + repositories/queries)
+### Layers
+- **UI:** NiceGUI (browser-based interface)  
+- **Application logic:** controllers and services  
+- **Persistence:** SQLite + ORM + data access (DAO)  
 
-**Design decisions (examples):**
-- Organize code using **MVC**:
-   - **Model:** domain + ORM entities (e.g. `models.py`)
-   - **View:** NiceGUI UI components/pages
-   - **Controller:** event handlers and coordination logic between UI, services, and persistence
-- Separate UI (`app/main.py`) from domain logic (e.g. `pricing.py`) and persistence (e.g. `models.py`, `db.py`)
-- Use and interaction of modules to minimize dependencies, by minimizing cohesion and maximizing coupling
-- Keep business rules testable without starting the UI
+### Design Decisions
+- MVC structure (Model–View–Controller)
+- Clear separation of concerns
+- Business logic independent of UI
 
-**Design patterns used (examples):**
-- MVC (Model–View–Controller)
-- Repository/DAO for database access (e.g. `queries.py`)
-- Strategy for business rules (e.g. discount calculation)
-- Adapter for external services (e.g. invoice generation backend)
-
+### Design Patterns Used
+- Model-View-Controller / Layered MVC Variant: MVC makes sense here because the application has a graphical user interface, user interactions, business objects, and database access. Separating these responsibilities makes the project easier to understand, test, and extend.  
+- Facade Pattern:  Facade makes sense because database setup involves several technical details. The rest of the application should not need to know how the database engine, tables, initial data, and sessions are created.   
 ---
 
-### 🗄️ Database and ORM
-
-> 🚧 Describe the database and your ORM entities. Ideally, a diagram documents the database and it is described together with the ORM entities.
+## 🗄️ Database and ORM
 
 ![ER Diagram](docs/architecture-diagrams/er_diagram.png)
 
-**ORM and Entities (example):** In the database, order are stored in ... that are mapped an `Order` entity. The `Order` ↔ `OrderItem` relationship ... ensures that an `Order` has at least one `OrderItem` and an `OrderItem` always relates to an `Order`.
+The application uses **SQLModel** to map domain objects to a SQLite database.
+
+### Entities
+- `Pizza`
+- `Order`
+- `OrderItem`
+
+### Relationships
+- One `Order` → many `OrderItem`
+- Each `OrderItem` references one `Pizza`
 
 ---
+
 
 ## ✅ Project Requirements
 
@@ -137,8 +159,7 @@ Each app must meet the following criteria in order to be accepted (see also the 
 
 The application interacts with the user via the browser. Users can:
 
-- Hauptmenü / Dashboard anzeigen
-- 
+- View the pizza menu
 - Select pizzas and quantities
 - See the running total
 - Receive an invoice generated as a file
@@ -162,55 +183,55 @@ All relevant data is managed via an ORM (e.g. SQLModel or SQLAlchemy). For the p
 
 ## ⚙️ Implementation
 
----
-
 ### Technology
 
-- Python 3.x
-- Environment: GitHub Codespaces
-- External libraries (e.g. NiceGUI, SQLAlchemy, Pydantic)
+- Python 3.x  
+- NiceGUI  
+- SQLModel / SQLAlchemy  
+- ReportLab  
+- pytest  
 
 ---
 
-### 📂 Repository Structure
+### 📚 Libraries Used
+
+- **nicegui** – UI framework  
+- **sqlmodel** – ORM  
+- **sqlalchemy** – database toolkit  
+- **reportlab** – PDF generation  
+- **python-dotenv** – configuration  
+- **pytest** – testing  
+- **pytest-cov** – coverage  
+
+---
+
+## 📂 Repository Structure
 
 ```text
-budgetplaner/
-├── models/                 # M - Model (Daten & Business-Logik)
+pizza_app/
+├── __init__.py
+├── __main__.py
+├── application.py
+├── data_access/
 │   ├── __init__.py
-│   ├── user.py
-│   ├── auth_model.py
-│   ├── account_model.py
-│   ├── budget.py
-│   ├── finance.py
-│   └── data_storage.py
-│
-├── views/                 # V - View (Benutzeroberfläche)
+│   ├── dao.py
+│   ├── db.py
+│   └── seed.py
+├── domain/
 │   ├── __init__.py
-│   ├── cli_view.py
-│   ├── auth_view.py
-│   ├── account_view.py
-│   ├── budget_view.py
-│   ├── statistics_view.py
-│   ├── menu_view.py
-│   └── formatter.py
-│
-├── controllers/           # C - Controller (Logik-Orchestrierung)
+│   └── models.py
+├── services/
 │   ├── __init__.py
-│   ├── auth_controller.py
-│   ├── budget_controller.py
-│   ├── account_controller.py
-│   └── main_controller.py
-│
-├── utils/
-│   ├── __init__.py
-│   ├── validators.py
-│   └── constants.py
-│
-├── main.py               # Entry-Point
-└── budget_daten.json
-```
+│   ├── invoice_service.py
+│   ├── order_service.py
+│   ├── pizza_service.py
+│   └── pricing_service.py
 
+└── ui/
+    ├── __init__.py
+    ├── controllers.py
+    └── pages.py
+```
 ---
 
 ### How to Run
@@ -241,7 +262,7 @@ budgetplaner/
 ### 3. Launch
 - Start the NiceGUI app (example):
    ```bash
-   python app/main.py
+   py -m pizza_app
    ```
 - Open the URL printed in the console.
 
@@ -257,8 +278,8 @@ Order Pizza:
 
 > 🚧 Add UI screenshots of the main screens (or a short video link):
 
-![UI – Menu](docs/ui-images/ui_menu.png)
-![UI – Checkout](docs/ui-images/ui_checkout.png)
+![UI – Checkout](docs/ui-images/ui_checkout_screen.png)
+![UI – Past Transactions](docs/ui-images/ui_past_transactions_screen.png)
 
 ---
 
@@ -266,74 +287,38 @@ Order Pizza:
 
 > 🚧 Explain what you test and how to run tests.
 
-**Types (examples):**
-- Unit tests: pricing/discount rules, validators
-- Integration tests: ORM mappings + queries against a test SQLite DB
+**Test mix:**
+- Overall 12 tests
+- 6 Unit tests: e.g. subtotal calculation, discount application above CHF 50, no discount at or below threshold, total calculation
+- 3 DB tests: e.g. menu query returns seeded pizzas, saving an order persists order + order items, empty DB / empty transactions behavior
+- 3 Integration tests: e.g. checkout with one pizza creates order and invoice, checkout with multiple pizzas applies discount correctly
 
-**Run:**
-```bash
-pytest
-```
-
-> 🚧 If you provide separate commands, document them here (e.g. `pytest -m integration`).
+**Template for writing test cases**
+1. Test case ID – unique identifier (e.g., TC_001)
+2. Test case title/description – What is the test about?
+3. Preconditions: Requirements before executing the test
+4. Test steps: Actions to perform
+5. Test data/input
+6. Expected result
+7. Actual result
+8. Status – pass or fail
+9. Comments – Additional notes or defect found
 
 ---
-
-### Libraries Used
-
-- nicegui
-- sqlalchemy / sqlmodel
-- pydantic
-- ...
 
 ## 👥 Team & Contributions
 
----
-
+> 🚧 Fill in the names of all team members and describe their individual contributions below.
 
 | Name      | Contribution |
 |-----------|--------------|
-| Gowsi | NiceGUI UI + documentation |
-| Paola | Database & ORM + documentation |
-| Nina | Business logic + documentation |
-
----
-
-## Planung / Zeitplan
-
----
-
-
-| Was      | Datum |  ZUständige Person | Bemerkungen | 
-|-----------|--------------|--------------|--------------|
-| Code fertig stellen  | 09.03.2026 | Paola | Finanzziel raus & recheriere DB-Sache 1W | 
-| GUI-Mockup erstellen | 09.03.2026 | Gowsi & Nina | |
-| Business Logik  | 27.03.2026  | Nina | |
-| Gui fertig stellen  | 27.03.2026 | Gowsi | |
-| Code & GUI an Rainer schicken für Feedback 1 | 28.03.2026 | Paola | |
-| 1 Coaching | 07.04.2026 | alle | verbesserte GUI & Code präsentieren & Feedback 2 einholen|
-| Verbesserung Feedback 2 | 28.04.2026 | | |
-| Präsentation aufsetzen & Planen | 12.05.2026 | Nina | |
-| 2 Coaching | 12.05.2026 | alle | REadme zeigen und Feedback einholen |
-| Umsetzen von noch offenen Anliegen | 22.05.2026 | alle | |
-| Finale Abgabe | 31.05.2026 | Nina | Präsi als PDF & GitHub-Link |
-| Präsentation | 26.05 - 02.06.2026 |  alle | * |
-
----
-
-## 🤝 Contributing
-
----
-
-- Use this repository as a starting point by importing it into your own GitHub account
-- Work only within your own copy — do not push to the original template
-- Commit regularly to track your progress
+| Student A | NiceGUI UI + documentation |
+| Student B | Database & ORM + documentation |
+| Student C | Business logic + documentation |
 
 ---
 
 ## 📝 License
-
----
 
 This project is provided for **educational use only** as part of the Advanced Programming module.
 
