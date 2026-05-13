@@ -133,9 +133,8 @@ Die Anwendung ermöglicht den Nutzenden:
 - Ausgabe von Statistik (Visualisierung) als PGN-Datei (finanzziele_diagramm.png & monats_summen_diagramm.png
 
 **Actors**
-- Benutzer (plant sein Budget)
-- System/Timer (führt Auto-Logout bei Inaktivität aus)
-- Datenspeicher/Dateisystem (sichert Benutzerdaten)
+- Benutzer 
+  
 ---
 
 ### Wireframes / Mockups
