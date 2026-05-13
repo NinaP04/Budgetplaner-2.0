@@ -75,7 +75,7 @@ def _transactions_card(email: str, refresh):
                     on_click=lambda: _income_dialog(email, refresh),
                 ).props("color=positive unelevated").classes("text-sm")
                 ui.button(
-                    "+ Erfassen",
+                    "+ Ausgabe",
                     on_click=lambda: _expense_dialog(email, categories, refresh),
                 ).props("color=negative unelevated").classes("text-sm")
 

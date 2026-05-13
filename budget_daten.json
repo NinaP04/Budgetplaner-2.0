@@ -118,6 +118,21 @@
                 "Freizeit": 300
             },
             "lohn": []
+        },
+        "gowsikanesan@hotmail.com": {
+            "email": "gowsikanesan@hotmail.com",
+            "vorname": "Gowsi",
+            "name": "Kanesan",
+            "passwort": "JDJiJDEyJHZpT2J4bmZZSnpVaEp5Q3pFL0NTL2UyeFZ3dExwWHBiWTU5Z3JXRnJrUi5LQWg1cU05QnJL",
+            "budget_kategorien": {
+                "Haushalt": [],
+                "Freizeit": []
+            },
+            "budget_limits": {
+                "Haushalt": 500,
+                "Freizeit": 300
+            },
+            "lohn": []
         }
     }
 }

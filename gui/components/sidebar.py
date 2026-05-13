@@ -13,9 +13,8 @@ def create_sidebar(active_page: str = "dashboard"):
     ).classes("p-0 w-[240px] border-none bg-[#0098DA]"):
         with ui.column().classes("w-full gap-0 pt-7 pb-5 px-6"):
             with ui.row().classes("items-center gap-3"):
-                ui.icon("description", size="26px").classes("text-white")
-                ui.label("FinFlow.").classes("text-xl font-bold italic text-white")
-            ui.label("Finanzverwaltung").classes("text-xs ml-10 -mt-0.5 text-white/60")
+                ui.label("FinFlow.").classes("text-xl font-bold text-white")
+                ui.label("Finanzverwaltung").classes("text-xs -mt-0.5 text-white/60")
 
         with ui.column().classes("w-full gap-1 flex-grow px-3 pt-2"):
             _nav_item("home", "Dashboard", "/", active_page == "dashboard")

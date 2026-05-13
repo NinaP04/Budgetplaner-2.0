@@ -41,7 +41,7 @@ def login():
 
     with ui.element('div').classes('min-h-screen w-full flex justify-center items-center bg-gray-50'):
         with ui.card().classes('p-8 border border-gray-300 rounded min-w-[360px]'):
-            ui.label('FinFlow').classes('text-2xl font-bold text-[#0098DA] mb-1')
+            ui.label('FinFlow.').classes('text-2xl font-bold text-[#0098DA] mb-1')
             ui.label('Willkommen zurück').classes('text-base font-semibold text-gray-700 mb-5')
 
             error_label = ui.label('').classes('text-sm text-red-500 mb-3')
