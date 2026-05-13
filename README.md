@@ -122,7 +122,7 @@ Die Anwendung ermöglicht den Nutzenden:
 
 > 🚧 Name actors and briefly describe each use case. Ideally, a UML use case diagram specifies use cases and relationships.
 
-![UML Use Case Diagram](docs/architecture-diagrams/uml_use_case_diagram.png)
+![UML Use Case Diagram](https://github.com/NinaP04/Budgetplaner-2.0/blob/bdaf4cfe1cda0b4709f0c8154743285b7ec4db3b/docs%20/architecture-diagrams/Use_Case_Diagramm_FinFlow.png)
 
 ### Main Use Cases
 - Hauptmenü anzeigen (Bedienung aller Funktionen)
