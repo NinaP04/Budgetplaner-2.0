@@ -1,0 +1,112 @@
+Sarah Spargut 
+
+"budget_kategorien": {
+                "Haushalt": [
+                    "04.05.2026 - Test - 10.80 CHF",
+
+                ],
+                "Fixkosten": [
+                    "04.05.2026 - Krankenkasse - 365.80 CHF",
+                    "30.04.2026 - Wingo Abo - 29.95 CHF",
+                    "27.04.2026 - Anteil Miete - 500.00 CHF"
+                    "01.04.2026 - Krankenkasse - 365.80 CHF",
+                    "31.03.2026 - Wingo Abo - 29.95 CHF",
+                    "28.03.2026 - Anteil Miete - 500.00 CHF"
+                    "02.03.2026 - Krankenkasse - 365.80 CHF",
+                ],
+                "Freizeit": [
+                    "13.05.2026 - kaffedate - 30.00 CHF"
+                    "24.04.2026 - Tickets Fantasy Basel - 104.2 CHF"
+                    "11.04.2026 - Brunch - 22.50 CHF"
+                ],
+                "Lebensmittel": [
+                    "12.05.2026 - Abendessen - 10.90 CHF"
+                    "12.05.2026 - Too Good To Go Päckchen - 13.20 CHF"
+                    "12.05.2026 - Too Good To Go Päckchen - 7.90 CHF"
+                    "12.05.2026 - Too Good To Go Päckchen - 16.50 CHF"
+                    "12.05.2026 - Too Good To Go Päckchen - 6.50 CHF"
+                    "29.04.2026 - Too Good To Go Päckchen - 7.90 CHF"
+                    "28.04.2026 - Abendessen - 12.60 CHF"
+                    "25.04.2026 - Abendessen - 37.40 CHF"
+                    "24.04.2026 - Kaffee - 8.30 CHF"
+                    "18.04.2026 - Frühstück - 5.10 CHF"
+                    "23.04.2026 - Too Good To Go Päckchen - 5.90 CHF"
+                    "18.04.2026 - Frühstück - 5.10 CHF"
+                    "17.04.2026 - Kaffee - 8.30 CHF"
+                    "17.04.2026 - Frühstück - 8.40 CHF"
+                    "16.04.2026 - Too Good To Go Päckchen - 5.90 CHF"
+                    "16.04.2026 - Too Good To Go Päckchen - 8.40 CHF"
+                    "07.04.2026 - Too Good To Go Päckchen - 8.40 CHF"
+                    "07.04.2026 - Too Good To Go Päckchen - 8.90 CHF"
+                    "07.04.2026 - Too Good To Go Päckchen - 8.90 CHF"
+                    "27.03.2026 - Frühstück - 6.70 CHF"
+                    "26.03.2026 - Abendessen - 13.50 CHF"
+                    "24.03.2026 - Mittagessen & Snacks - 16.05 CHF"
+                    "24.03.2026 - Too Good To Go Päckchen - 8.90 CHF"
+                    "24.03.2026 - Too Good To Go Päckchen - 8.90 CHF"
+                    "20.03.2026 - Abendessen - 15.10 CHF"
+                    "20.03.2026 - Frühstück - 5.10 CHF"
+                    "18.03.2026 - Too Good To Go Päckchen - 7.90 CHF"
+                    "17.03.2026 - Too Good To Go Päckchen - 8.90 CHF"
+                    "17.03.2026 - Too Good To Go Päckchen - 8.90 CHF"
+                    "13.03.2026 - Frühstück - 7.60 CHF"
+                    "10.03.2026 - Abendessen - 3.85 CHF"
+                    "10.03.2026 - Too Good To Go Päckchen - 17.80 CHF"
+                    "10.03.2026 - Drink - 1.15 CHF"
+                    "10.03.2026 - Mittagessen - 5.10 CHF"
+                    "07.03.2026 - Lebensmittel - 13.80 CHF"
+                    "07.03.2026 - Frühstück - 5.10 CHF"
+                    "06.03.2026 - Mittagessen - 10.60 CHF"
+                    "04.03.2026 - Too Good To Go Päckchen - 11.80 CHF"
+                    "04.03.2026 - Too Good To Go Päckchen - 7.50 CHF"
+                    "03.03.2026 - Abendessen - 13.90 CHF"
+                    "03.03.2026 - Mittagessen - 9.55 CHF"
+                    "02.03.2026 - Kaffee - 2.00 CHF"
+                ],
+                 "Transport": [
+                    "05.05.2026 - Zugticket Olten - 5.50 CHF"
+                    "07.05.2026 - Zugticket Olten - 6.80 CHF"
+                    "05.05.2026 - Zugticket Tecknau - 3.60 CHF"
+                    "05.05.2026 - Zugticket Olten - 5.50 CHF"
+                    "28.04.2026 - Zugticket Tecknau - 3.60 CHF"
+                    "28.04.2026 - Zugticket Olten - 8.60 CHF"
+                    "24.04.2026 - Zugticket Tecknau - 3.60 CHF"
+                    "23.04.2026 - Zugticket Olten - 6.60 CHF"
+                    "18.04.2026 - Zugticket Tecknau - 3.60 CHF"
+                    "17.04.2026 - Zugticket Gelterkinden - 3.60 CHF"
+                    "17.04.2026 - Zugticket Olten - 6.40 CHF"
+                    "16.04.2026 - Zugticket Olten - 6.60 CHF"
+                    "27.03.2026 - Zugticket Basel - 8.60 CHF"
+                    "24.03.2026 - Zugticket Olten - 6.40 CHF"
+                    "24.03.2026 - Zugticket Basel - 8.60 CHF"
+                    "24.03.2026 - Zugticket Olten - 5.50 CHF"
+                    "20.03.2026 - Zugticket Gelterkinden - 3.60 CHF"
+                    "19.03.2026 - Zugticket Olten - 6.80 CHF"
+                    "13.03.2026 - Zugtickets Liestal - 5.50 CHF"
+                    "10.03.2026 - Zugticket Basel - 8.60 CHF"
+                    "10.03.2026 - Zugticket Olten - 3.60 CHF"
+                    "09.03.2026 - Zugticket Olten - 6.40 CHF"
+                    "07.03.2026 - Zugticket Basel - 8.60 CHF"
+                    "07.03.2026 - Zugticket Olten - 6.40 CHF"
+                    "06.03.2026 - Zugticket Basel - 8.60 CHF"
+                    "03.03.2026 - Zugticket Gelterkinden - 3.60 CHF"
+                    "03.03.2026 - Zugticket Olten - 3.60 CHF"
+                    "02.03.2026 - Zugticket Olten - 6.20 CHF"
+		    "02.03.2026 - Zugticket Olten - 6.40 CHF"
+                ],
+                "Studium": [
+                    "25.04.2026 - Karteikarten - 16.75 CHF"
+                    "17.04.2026 - Aufladung FH Karte - 100.00 CHF"
+                    "18.03.2026 - Semestergebühren - 860.00 CHF"
+                ]
+            },
+            "budget_limits": {
+                "Haushalt": 500,
+                "Freizeit": 300
+            },
+            "lohn": [
+                "27.05.2026 - Lohn - 3500.0 CHF",
+                "27.04.2026 - Lohn - 3500.0 CHF",
+		"27.03.2026 - Lohn - 3500.0 CHF", 
+		"27.02.2026 - Lohn - 3500.0 CHF"
+            ]
