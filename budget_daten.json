@@ -101,28 +101,31 @@
             "passwort": "JDJiJDEyJEJjQ0t1UmhESEIzUjlULll4bW9zQ3VnWnQuNi43V3BLZGRTUHk5cHF4MTlpbnIuS0hMQW95",
             "budget_kategorien": {
                 "Haushalt": [
-                    "04.05.2026 - Test - 10.80 CHF"
-
-                ],
-                "Freizeit": [
-                    "13.05.2026 - Kino Besuch - 30.00 CHF",
-                    "24.04.2026 - Tickets Fantasy Basel - 104.20 CHF",
-     				"15.04.2025 - Ausflug Zürichsee - 25 CHF",
-                    "11.04.2026 - Brunch - 22.50 CHF"
-        			"03.04.2025 - Buchhandlung - 22 CHF",
-                    "11.04.2026 - Brunch - 22.50 CHF"
-                    "25.03.2026 -  - 22.50 CHF"
-                    "18.03.2026 - Keramik bemalen - 80 CHF"
-                    "14.03.2026 - Geburtstag Brunch - 45.50 CHF"
-                ],
-                "Fixkosten": [
                     "04.05.2026 - Krankenkasse - 365.80 CHF",
                     "30.04.2026 - Wingo Abo - 29.95 CHF",
                     "27.04.2026 - Anteil Miete - 500.00 CHF",
+                    "15.04.2026 - Müllsack-Etiketten - 20 CHF",
                     "01.04.2026 - Krankenkasse - 365.80 CHF",
                     "31.03.2026 - Wingo Abo - 29.95 CHF",
                     "28.03.2026 - Anteil Miete - 500.00 CHF",
                     "02.03.2026 - Krankenkasse - 365.80 CHF"
+                ],
+                "Freizeit": [
+                    "13.05.2026 - Kino Besuch - 30.00 CHF",
+                    "04.05.2026 - Wolle - 13.20 CHF",
+                    "03.05.2026 - Brunch Date - 17.35 CHF",
+                    "27.04.2026 - Glace Date - 8.20 CHF",
+                    "24.04.2026 - Tickets Fantasy Basel - 104.20 CHF",
+     				"20.04.2025 - Ausflug Zürichsee - 25 CHF",
+        			"16.04.2025 - Museumsbesuch - 12 CHF",
+                    "11.04.2026 - Brunch Date - 22.50 CHF",
+        			"03.04.2025 - Buchhandlung - 22 CHF",
+        			"03.04.2025 - Museumsbesuch - 12 CHF",
+                    "11.04.2026 - Brunch Date - 22.50 CHF",
+                    "25.03.2026 - Cafe Date - 14.55 CHF",
+                    "18.03.2026 - Keramik bemalen - 80 CHF",
+                    "18.03.2026 - Cafe Date - 6.70 CHF",
+                    "14.03.2026 - Geburtstag Brunch - 45.50 CHF"
                 ],
                 "Lebensmittel": [
                     "12.05.2026 - Abendessen - 10.90 CHF",
