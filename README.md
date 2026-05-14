@@ -379,12 +379,23 @@ FinFlow nutzen (Hauptfunktionen)
 - Unit tests: pricing/discount rules, validators
 - Integration tests: ORM mappings + queries against a test SQLite DB
 
-**Run:**
-```bash
-pytest
-```
+**Test mix:**
+- Insgesamt gibt es X Testfälle
+- 6 Unit Tests:
+- 3 Datenbank Tests:
+- 3 Integrations Tests:
 
-> 🚧 If you provide separate commands, document them here (e.g. `pytest -m integration`).
+**Template for writing test cases**
+1. 
+2. 
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
 
 ---
 
