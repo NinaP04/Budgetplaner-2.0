@@ -24,9 +24,10 @@ def register():
     password_confirm_input = None
     error_label = None
 
-    validation_hints = {
+    validation_hints: dict = {
         "length": None,
         "uppercase": None,
+        "lowercase": None,
         "number": None,
         "special": None,
     }
@@ -34,8 +35,10 @@ def register():
     SPECIAL_CHARS = "!@#%?&*"
 
     def _set_hint(key: str, passed: bool):
-        hint = validation_hints[key]
-        hint["icon"].set_text("check_circle" if passed else "cancel")
+        hint = validation_hints.get(key)
+        if not hint:
+            return
+        hint["icon"].props(f'name={"check_circle" if passed else "cancel"}')
         hint["icon"].classes(
             "text-green-500" if passed else "text-red-400",
             remove="text-green-500 text-red-400",
@@ -45,6 +48,7 @@ def register():
         password = password_input.value or ""
         _set_hint("length", len(password) >= 8)
         _set_hint("uppercase", any(c.isupper() for c in password))
+        _set_hint("lowercase", any(c.islower() for c in password))
         _set_hint("number", any(c.isdigit() for c in password))
         _set_hint("special", any(c in SPECIAL_CHARS for c in password))
 
@@ -63,7 +67,8 @@ def register():
             error_label.set_visibility(True)
             return
 
-        success, message = auth_service.register_user(vorname, name, email, password)
+        success, message = auth_service.register_user(
+            vorname, name, email, password)
 
         if success:
             ui.notify(message, type="positive")
@@ -78,7 +83,8 @@ def register():
         with ui.card().classes(
             "p-8 border border-gray-300 rounded min-w-[380px] max-w-[460px]"
         ):
-            ui.label("FinFlow").classes("text-2xl font-bold text-[#0098DA] mb-1")
+            ui.label("FinFlow").classes(
+                "text-2xl font-bold text-[#0098DA] mb-1")
             ui.label("Konto erstellen").classes(
                 "text-base font-semibold text-gray-700 mb-5"
             )
@@ -108,10 +114,25 @@ def register():
                     password_toggle_button=True,
                 )
                 .props("outlined dense")
-                .classes("w-full mb-1")
+                .classes("w-full mb-2")
             )
 
             password_input.on("input", validate_password_live)
+
+            with ui.column().classes("gap-1 mb-3"):
+                rules = [
+                    ("length", "Mindestens 8 Zeichen"),
+                    ("uppercase", "Mindestens 1 Grossbuchstabe"),
+                    ("lowercase", "Mindestens 1 Kleinbuchstabe"),
+                    ("number", "Mindestens 1 Zahl"),
+                    ("special", "Mindestens 1 Sonderzeichen (!@#%?&*)"),
+                ]
+                for key, label_text in rules:
+                    with ui.row().classes("items-center gap-2"):
+                        icon = ui.icon("cancel", size="16px").classes(
+                            "text-red-400")
+                        ui.label(label_text).classes("text-xs text-gray-600")
+                        validation_hints[key] = {"icon": icon}
 
             password_confirm_input = (
                 ui.input(

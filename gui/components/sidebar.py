@@ -11,10 +11,22 @@ def create_sidebar(active_page: str = "dashboard"):
         top_corner=True,
         bottom_corner=True,
     ).classes("p-0 w-[240px] border-none bg-[#0098DA]"):
-        with ui.column().classes("w-full gap-0 pt-7 pb-5 px-6"):
-            with ui.row().classes("items-center gap-3"):
-                ui.label("FinFlow.").classes("text-xl font-bold text-white")
-                ui.label("Finanzverwaltung").classes("text-xs -mt-0.5 text-white/60")
+        with ui.column().classes("w-full gap-0 pt-7 pb-4 px-6"):
+            with ui.row().classes("items-center gap-2 no-wrap"):
+                with ui.element("div").classes(
+                    "flex items-center justify-center w-9 h-9 rounded-xl "
+                    "bg-white/15 backdrop-blur-sm"
+                ):
+                    ui.icon("account_balance_wallet",
+                            size="20px").classes("text-white")
+                with ui.row().classes("items-baseline gap-0"):
+                    ui.label("FinFlow").classes(
+                        "text-2xl font-bold text-white tracking-tight leading-none"
+                    )
+                    ui.label(".").classes(
+                        "text-2xl font-bold text-white/50 leading-none"
+                    )
+            ui.element("div").classes("w-full mt-5 h-px bg-white/15")
 
         with ui.column().classes("w-full gap-1 flex-grow px-3 pt-2"):
             _nav_item("home", "Dashboard", "/", active_page == "dashboard")
