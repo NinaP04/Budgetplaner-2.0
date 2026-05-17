@@ -410,27 +410,6 @@ FinFlow nutzen (Hauptfunktionen)
 | Paola | Database & ORM + documentation |
 | Nina | Business logic + documentation |
 
----
-
-## Planung / Zeitplan
-
----
-
-
-| Was      | Datum |  ZUständige Person | Bemerkungen | 
-|-----------|--------------|--------------|--------------|
-| Code fertig stellen  | 09.03.2026 | Paola | Finanzziel raus & recheriere DB-Sache 1W | 
-| GUI-Mockup erstellen | 09.03.2026 | Gowsi & Nina | |
-| Business Logik  | 27.03.2026  | Nina | |
-| Gui fertig stellen  | 27.03.2026 | Gowsi | |
-| Code & GUI an Rainer schicken für Feedback 1 | 28.03.2026 | Paola | |
-| 1 Coaching | 07.04.2026 | alle | verbesserte GUI & Code präsentieren & Feedback 2 einholen|
-| Verbesserung Feedback 2 | 28.04.2026 | | |
-| Präsentation aufsetzen & Planen | 12.05.2026 | Nina | |
-| 2 Coaching | 12.05.2026 | alle | REadme zeigen und Feedback einholen |
-| Umsetzen von noch offenen Anliegen | 22.05.2026 | alle | |
-| Finale Abgabe | 24.05.2026 | Nina | Präsi als PDF & GitHub-Link |
-| Präsentation | 02.06.2026 |  alle | * |
 
 ---
 
