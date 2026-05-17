@@ -380,23 +380,142 @@ FinFlow nutzen (Hauptfunktionen)
 - Integration tests: ORM mappings + queries against a test SQLite DB
 
 **Test mix:**
-- Insgesamt gibt es X Testfälle
-- 6 Unit Tests:
+- Insgesamt gibt es 13 Testfälle
+- 6 Unit Tests: Datum-Validator aktzeptiert ein gültiges Datum und lehnt ein ungültiges Datum ab, String korrekt in Objekt umwandeln, Total Budgetkategorie berechnen und auf Überschreitung vom Limit prüfen, Ablehnung von doppelt erfassten Budgetkategorien und das aktualisieren von Nutzerdaten.
 - 3 Datenbank Tests:
-- 3 Integrations Tests:
+- 4 Integrations Tests: Import/Export Kategorien Roundtrip, Kategorie hinzufügen, aktualisiert und speichern, Aktualisiert Accounts und behält Profil‑Daten, Passwort‑Roundtrip und Reset‑Code Validierung.
 
-**Template for writing test cases**
-1. 
-2. 
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
+**Detaillierte Testfälle**
 
+1. **Testfall‑ID:** TC_01
+- **Titel / Beschreibung:** Datum-Validator akzeptiert gültiges Datum
+- **Voraussetzungen:** Keine
+- **Testschritte:** `validiere_datum("14.05.2026")` aufrufen
+- **Testdaten / Eingaben:** "14.05.2026"
+- **Erwartetes Ergebnis:** Rückgabe `True`
+- **Tatsächliches Ergebnis:** (noch nicht ausgeführt)
+- **Status:** Nicht ausgeführt
+- **Kommentare:** 
+
+2. **Testfall‑ID:** TC_02
+- **Titel / Beschreibung:** Datum-Validator lehnt ungültiges Datum ab
+- **Voraussetzungen:** Keine
+- **Testschritte:** `validiere_datum("31.02.2026")` aufrufen
+- **Testdaten / Eingaben:** "31.02.2026"
+- **Erwartetes Ergebnis:** Rückgabe `False`
+- **Tatsächliches Ergebnis:** (noch nicht ausgeführt)
+- **Status:** Nicht ausgeführt
+- **Kommentare:** 
+
+3. **Testfall‑ID:** TC_03
+- **Titel / Beschreibung:** Parst Felder korrekt
+- **Voraussetzungen:** Keine
+- **Testschritte:** `BudgetEntry.from_string("14.05.2026 - Essen - 12.50 CHF")` aufrufen und Felder prüfen
+- **Testdaten / Eingaben:** "14.05.2026 - Essen - 12.50 CHF"
+- **Erwartetes Ergebnis:** `datum=="14.05.2026"`, `art=="Essen"`, `betrag==12.5`, `str(entry)=="14.05.2026 - Essen - 12.50 CHF"`
+- **Tatsächliches Ergebnis:** (noch nicht ausgeführt)
+- **Status:** Nicht ausgeführt
+- **Kommentare:** 
+
+4. **Testfall‑ID:** TC_04
+- **Titel / Beschreibung:** Berechnet Total und prüft Limit‑Überschreitung
+- **Voraussetzungen:** Kategorie `Essen` mit Limit=100 anlegen
+- **Testschritte:** Zwei Einträge hinzufügen (40 und 30), `total()` und `limit_exceeded()` prüfen
+- **Testdaten / Eingaben:** Einträge 40 und 30; Prüfwerte 20 (nicht überschritten), 40 (überschritten)
+- **Erwartetes Ergebnis:** `total()==70`, `limit_exceeded(20)==False`, `limit_exceeded(40)==True`
+- **Tatsächliches Ergebnis:** (noch nicht ausgeführt)
+- **Status:** Nicht ausgeführt
+- **Kommentare:** 
+
+5. **Testfall‑ID:** TC_05
+- **Titel / Beschreibung:** Lehnt doppelte Kategorie ab
+- **Voraussetzungen:** Leerer `BudgetManager`
+- **Testschritte:** `add_category("Miete")` zweimal aufrufen
+- **Testdaten / Eingaben:** Kategorie-Name "Miete"
+- **Erwartetes Ergebnis:** Zweiter Aufruf löst `ValueError` aus
+- **Tatsächliches Ergebnis:** (noch nicht ausgeführt)
+- **Status:** Nicht ausgeführt
+- **Kommentare:** 
+
+6. **Testfall‑ID:** TC_06
+- **Titel / Beschreibung:** Aktualisiert Nutzerdaten
+- **Voraussetzungen:** `user_data = {"vorname":"Anna","name":"Muster"}`
+- **Testschritte:** `AccountModel.change_firstname(user_data, "Laura")` aufrufen
+- **Testdaten / Eingaben:** Neuer Vorname "Laura"
+- **Erwartetes Ergebnis:** Rückgabe `(True, "Vorname erfolgreich geändert.")` und `user_data["vorname"]=="Laura"`
+- **Tatsächliches Ergebnis:** (noch nicht ausgeführt)
+- **Status:** Nicht ausgeführt
+- **Kommentare:** 
+
+7. **Testfall‑ID:** TC_07
+- **Titel / Beschreibung:** Import/Export Kategorien Roundtrip
+- **Voraussetzungen:** `BudgetController` mit Mock‑Save; gültige `user_data` mit Kategorien und Limits
+- **Testschritte:** `controller.load_from_user_data(user_data)` aufrufen; `_export_categories()` auswerten
+- **Testdaten / Eingaben:** `user_data["budget_kategorien"]` mit zwei Kategorien und Einträgen (siehe Testdatei)
+- **Erwartetes Ergebnis:** `_export_categories()` liefert genau `user_data["budget_kategorien"]`
+- **Tatsächliches Ergebnis:** (noch nicht ausgeführt)
+- **Status:** Nicht ausgeführt
+- **Kommentare:** 
+
+8. **Testfall‑ID:** TC_08
+- **Titel / Beschreibung:** Fügt Kategorie hinzu, aktualisiert und speichert Nutzerdaten 
+- **Voraussetzungen:** `BudgetController` mit Mock‑View (Prompt/Validation) und Mock‑Save; `user_data = {"budget_kategorien": {}, "budget_limits": {}}`
+- **Testschritte:** `controller.handle_main_action("2", user_data)` aufrufen
+- **Testdaten / Eingaben:** Prompt liefert "Gesundheit"
+- **Erwartetes Ergebnis:** `handled==True`, "Gesundheit" in `user_data["budget_kategorien"]` als leere Liste, `save_callback` aufgerufen
+- **Tatsächliches Ergebnis:** (noch nicht ausgeführt)
+- **Status:** Nicht ausgeführt
+- **Kommentare:** 
+
+9. **Testfall‑ID:** TC_09
+- **Titel / Beschreibung:** Aktualisiert Accounts und behält Profil‑Daten
+- **Voraussetzungen:** `accounts` Dict mit Eintrag "alt@example.com"
+- **Testschritte:** `AccountModel.change_email(accounts, "alt@example.com", "neu@example.com")` aufrufen
+- **Testdaten / Eingaben:** Alte und neue E‑Mail
+- **Erwartetes Ergebnis:** Rückgabe `(True, "E-Mail erfolgreich geändert.", "neu@example.com")`, alte E‑Mail nicht mehr vorhanden, neue vorhanden und Profil‑Email aktualisiert
+- **Tatsächliches Ergebnis:** (noch nicht ausgeführt)
+- **Status:** Nicht ausgeführt
+- **Kommentare:** 
+
+10. **Testfall‑ID:** TC_10
+- **Titel / Beschreibung:** Passwort‑Roundtrip und Reset‑Code Validierung
+- **Voraussetzungen:** `AuthModel()` Instanz und `user_data = AuthModel.default_user_data("sarah@example.com")`
+- **Testschritte:** `set_password(user_data, "Test1234!")`, `verify_password("Test1234!", user_data["passwort"])`, `generate_reset_code(...)`, `verify_reset_code(...)` prüfen
+- **Testdaten / Eingaben:** Passwort "Test1234!", generierter Reset‑Code, falscher Code "000000"
+- **Erwartetes Ergebnis:** Passwort‑Verifikation `True`; `verify_reset_code` mit generiertem Code `True`; mit "000000" `False`
+- **Tatsächliches Ergebnis:** (noch nicht ausgeführt)
+- **Status:** Nicht ausgeführt
+- **Kommentare:** 
+
+11. **Testfall‑ID:** TC_11
+- **Titel / Beschreibung:** 
+- **Voraussetzungen:** 
+- **Testschritte:** 
+- **Testdaten / Eingaben:** 
+- **Erwartetes Ergebnis:** 
+- **Tatsächliches Ergebnis:** 
+- **Status:** 
+- **Kommentare:** 
+
+12. **Testfall‑ID:** TC_12
+- **Titel / Beschreibung:** 
+- **Voraussetzungen:** 
+- **Testschritte:** 
+- **Testdaten / Eingaben:** 
+- **Erwartetes Ergebnis:** 
+- **Tatsächliches Ergebnis:** 
+- **Status:** 
+- **Kommentare:** 
+
+13. **Testfall‑ID:** TC_13
+- **Titel / Beschreibung:** 
+- **Voraussetzungen:** 
+- **Testschritte:** 
+- **Testdaten / Eingaben:** 
+- **Erwartetes Ergebnis:** 
+- **Tatsächliches Ergebnis:** 
+- **Status:** 
+- **Kommentare:** 
 ---
 
 ## 👥 Team & Contributions
