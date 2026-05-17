@@ -387,7 +387,7 @@ FinFlow nutzen (Hauptfunktionen)
 
 **Detaillierte Testfälle**
 
-1. **Testfall‑ID:** TC_01
+**1. Testfall‑ID: TC_01**
 - **Titel / Beschreibung:** Datum-Validator akzeptiert gültiges Datum
 - **Voraussetzungen:** Keine
 - **Testschritte:** `validiere_datum("14.05.2026")` aufrufen
@@ -397,7 +397,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** Nicht ausgeführt
 - **Kommentare:** 
 
-2. **Testfall‑ID:** TC_02
+**2. Testfall‑ID: TC_02**
 - **Titel / Beschreibung:** Datum-Validator lehnt ungültiges Datum ab
 - **Voraussetzungen:** Keine
 - **Testschritte:** `validiere_datum("31.02.2026")` aufrufen
@@ -407,7 +407,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** Nicht ausgeführt
 - **Kommentare:** 
 
-3. **Testfall‑ID:** TC_03
+**3. Testfall‑ID: TC_03**
 - **Titel / Beschreibung:** Parst Felder korrekt
 - **Voraussetzungen:** Keine
 - **Testschritte:** `BudgetEntry.from_string("14.05.2026 - Essen - 12.50 CHF")` aufrufen und Felder prüfen
@@ -417,7 +417,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** Nicht ausgeführt
 - **Kommentare:** 
 
-4. **Testfall‑ID:** TC_04
+**4. Testfall‑ID: TC_04**
 - **Titel / Beschreibung:** Berechnet Total und prüft Limit‑Überschreitung
 - **Voraussetzungen:** Kategorie `Essen` mit Limit=100 anlegen
 - **Testschritte:** Zwei Einträge hinzufügen (40 und 30), `total()` und `limit_exceeded()` prüfen
@@ -427,7 +427,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** Nicht ausgeführt
 - **Kommentare:** 
 
-5. **Testfall‑ID:** TC_05
+**5. Testfall‑ID: TC_05**
 - **Titel / Beschreibung:** Lehnt doppelte Kategorie ab
 - **Voraussetzungen:** Leerer `BudgetManager`
 - **Testschritte:** `add_category("Miete")` zweimal aufrufen
@@ -437,7 +437,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** Nicht ausgeführt
 - **Kommentare:** 
 
-6. **Testfall‑ID:** TC_06
+**6. Testfall‑ID: TC_06**
 - **Titel / Beschreibung:** Aktualisiert Nutzerdaten
 - **Voraussetzungen:** `user_data = {"vorname":"Anna","name":"Muster"}`
 - **Testschritte:** `AccountModel.change_firstname(user_data, "Laura")` aufrufen
@@ -447,7 +447,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** Nicht ausgeführt
 - **Kommentare:** 
 
-7. **Testfall‑ID:** TC_07
+**7. Testfall‑ID: TC_07**
 - **Titel / Beschreibung:** Import/Export Kategorien Roundtrip
 - **Voraussetzungen:** `BudgetController` mit Mock‑Save; gültige `user_data` mit Kategorien und Limits
 - **Testschritte:** `controller.load_from_user_data(user_data)` aufrufen; `_export_categories()` auswerten
@@ -457,7 +457,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** Nicht ausgeführt
 - **Kommentare:** 
 
-8. **Testfall‑ID:** TC_08
+**8. Testfall‑ID: TC_08**
 - **Titel / Beschreibung:** Fügt Kategorie hinzu, aktualisiert und speichert Nutzerdaten 
 - **Voraussetzungen:** `BudgetController` mit Mock‑View (Prompt/Validation) und Mock‑Save; `user_data = {"budget_kategorien": {}, "budget_limits": {}}`
 - **Testschritte:** `controller.handle_main_action("2", user_data)` aufrufen
@@ -467,7 +467,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** Nicht ausgeführt
 - **Kommentare:** 
 
-9. **Testfall‑ID:** TC_09
+**9. Testfall‑ID: TC_09**
 - **Titel / Beschreibung:** Aktualisiert Accounts und behält Profil‑Daten
 - **Voraussetzungen:** `accounts` Dict mit Eintrag "alt@example.com"
 - **Testschritte:** `AccountModel.change_email(accounts, "alt@example.com", "neu@example.com")` aufrufen
@@ -477,7 +477,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** Nicht ausgeführt
 - **Kommentare:** 
 
-10. **Testfall‑ID:** TC_10
+**10. Testfall‑ID: TC_10**
 - **Titel / Beschreibung:** Passwort‑Roundtrip und Reset‑Code Validierung
 - **Voraussetzungen:** `AuthModel()` Instanz und `user_data = AuthModel.default_user_data("sarah@example.com")`
 - **Testschritte:** `set_password(user_data, "Test1234!")`, `verify_password("Test1234!", user_data["passwort"])`, `generate_reset_code(...)`, `verify_reset_code(...)` prüfen
@@ -487,7 +487,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** Nicht ausgeführt
 - **Kommentare:** 
 
-11. **Testfall‑ID:** TC_11
+**11. Testfall‑ID: TC_11**
 - **Titel / Beschreibung:** 
 - **Voraussetzungen:** 
 - **Testschritte:** 
@@ -497,7 +497,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** 
 - **Kommentare:** 
 
-12. **Testfall‑ID:** TC_12
+**12. Testfall‑ID: TC_12**
 - **Titel / Beschreibung:** 
 - **Voraussetzungen:** 
 - **Testschritte:** 
@@ -507,7 +507,7 @@ FinFlow nutzen (Hauptfunktionen)
 - **Status:** 
 - **Kommentare:** 
 
-13. **Testfall‑ID:** TC_13
+**13. Testfall‑ID: TC_13**
 - **Titel / Beschreibung:** 
 - **Voraussetzungen:** 
 - **Testschritte:** 
