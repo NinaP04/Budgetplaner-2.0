@@ -125,7 +125,11 @@
             "name": "Kanesan",
             "passwort": "JDJiJDEyJDB6T2I0TlM3anIuTVhWSUZvMEdLNmU3bWdoWTZ6amJ5dnJsS0RVRDVZbUNDQzgxMk83QU9x",
             "budget_kategorien": {
-                "Haushalt": [],
+                "Haushalt": [
+                    "17.05.2026 - Reinigung - 700.00 CHF",
+                    "1.01.2026 - Miete - 4000.00 CHF",
+                    "01.01.2026 - Miete - 4000.00 CHF"
+                ],
                 "Freizeit": []
             },
             "budget_limits": {

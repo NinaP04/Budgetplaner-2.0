@@ -1,7 +1,7 @@
-"""Budget service: adapter from the NiceGUI UI to the budget models.
+"""Budget-Service: Adapter von der NiceGUI-Oberfläche zu den Budget-Modellen.
 
-Reads and writes the same JSON file used by the CLI so both views share
-one source of truth.
+Liest und schreibt dieselbe JSON-Datei wie die CLI, sodass beide Ansichten
+eine gemeinsame Datenquelle nutzen.
 """
 
 import re
@@ -34,10 +34,17 @@ class BudgetService:
         result: list[dict] = []
         for name, eintraege in kategorien.items():
             parsed = []
-            for s in eintraege:
+            # Index wird mitgegeben, damit das UI den richtigen Eintrag
+            # zum Bearbeiten/Löschen referenzieren kann.
+            for idx, s in enumerate(eintraege):
                 try:
                     e = BudgetEntry.from_string(s)
-                    parsed.append({'datum': e.datum, 'art': e.art, 'betrag': e.betrag})
+                    parsed.append({
+                        'index': idx,
+                        'datum': e.datum,
+                        'art': e.art,
+                        'betrag': e.betrag,
+                    })
                 except ValueError:
                     continue
             spent = sum(p['betrag'] for p in parsed)
@@ -126,8 +133,6 @@ class BudgetService:
         return transactions
 
     def add_entry(self, email: str, category: str, datum: str, art: str, betrag: float):
-        from models.budget import BudgetEntry
-        from utils import validiere_datum
         user = self._user(email)
         if user is None:
             return False, 'Benutzer nicht gefunden.'
@@ -139,7 +144,7 @@ class BudgetService:
             return False, 'Ungültiges Datum (Format: DD.MM.YYYY).'
         art = (art or '').strip()
         if not art:
-            return False, 'Art darf nicht leer sein.'
+            return False, 'Name darf nicht leer sein.'
         try:
             value = float(betrag)
         except (TypeError, ValueError):
@@ -150,6 +155,62 @@ class BudgetService:
         kategorien[category].append(str(entry))
         self._dh.speichern()
         return True, 'Eintrag hinzugefügt.'
+
+    # ---------------------------------------------------------
+    # NEU: Eintrag löschen
+    # ---------------------------------------------------------
+    def delete_entry(self, email: str, category: str, index: int):
+        user = self._user(email)
+        if user is None:
+            return False, 'Benutzer nicht gefunden.'
+        kategorien = user.get('budget_kategorien', {})
+        if category not in kategorien:
+            return False, 'Kategorie nicht gefunden.'
+        entries = kategorien[category]
+        if index < 0 or index >= len(entries):
+            return False, 'Eintrag nicht gefunden.'
+        del entries[index]
+        self._dh.speichern()
+        return True, 'Eintrag gelöscht.'
+
+    # ---------------------------------------------------------
+    # NEU: Eintrag bearbeiten
+    # ---------------------------------------------------------
+    def update_entry(
+        self,
+        email: str,
+        category: str,
+        index: int,
+        datum: str,
+        art: str,
+        betrag: float,
+    ):
+        user = self._user(email)
+        if user is None:
+            return False, 'Benutzer nicht gefunden.'
+        kategorien = user.get('budget_kategorien', {})
+        if category not in kategorien:
+            return False, 'Kategorie nicht gefunden.'
+        entries = kategorien[category]
+        if index < 0 or index >= len(entries):
+            return False, 'Eintrag nicht gefunden.'
+
+        datum = (datum or '').strip()
+        if not validiere_datum(datum):
+            return False, 'Ungültiges Datum (Format: DD.MM.YYYY).'
+        art = (art or '').strip()
+        if not art:
+            return False, 'Name darf nicht leer sein.'
+        try:
+            value = float(betrag)
+        except (TypeError, ValueError):
+            return False, 'Ungültiger Betrag.'
+        if value <= 0:
+            return False, 'Betrag muss grösser als 0 sein.'
+
+        entries[index] = str(BudgetEntry(datum, art, value))
+        self._dh.speichern()
+        return True, 'Eintrag aktualisiert.'
 
     def delete_category(self, email: str, name: str):
         user = self._user(email)
