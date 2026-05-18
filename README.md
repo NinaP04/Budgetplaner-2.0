@@ -141,7 +141,8 @@ Die Anwendung ermöglicht den Nutzenden:
 > 🚧 Add screenshots of the wireframe mockups you chose to implement.
 
 ![Wireframe – Home](https://github.com/NinaP04/Budgetplaner-2.0/blob/cb1511deb0a741546a622d07674fc02290b1bf0b/docs%20/ui/ui_user_dashboard.PNG)
-![Wireframe – Checkout](docs/ui-images/wireframe_checkout.png)
+
+![Wireframe – Checkout](https://github.com/NinaP04/Budgetplaner-2.0/blob/9327927451c7a20de7c263360b1e0c4cc7732fc5/docs%20/ui/ui_category_overview.PNG)
 
 ---
 
