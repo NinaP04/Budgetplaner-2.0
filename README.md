@@ -22,10 +22,6 @@ This project is intended to:
 
 ---
 
-# 🍕 TEMPLATE for documentation
-
----
-
 ## 📝 Application Requirements
 
 ---
@@ -375,8 +371,6 @@ FinFlow nutzen (Hauptfunktionen)
 
 ## 🧪 Testing
 
-> 🚧 Explain what you test and how to run tests.
-
 **Types (examples):**
 - Unit tests: pricing/discount rules, validators
 - Integration tests: ORM mappings + queries against a test SQLite DB
@@ -517,7 +511,8 @@ FinFlow nutzen (Hauptfunktionen)
 - **Erwartetes Ergebnis:** 
 - **Tatsächliches Ergebnis:** 
 - **Status:** 
-- **Kommentare:** 
+- **Kommentare:**
+
 ---
 
 ## 👥 Team & Contributions
@@ -531,16 +526,6 @@ FinFlow nutzen (Hauptfunktionen)
 | Paola | Database & ORM + documentation |
 | Nina | Business logic + documentation |
 
-
----
-
-## 🤝 Contributing
-
----
-
-- Use this repository as a starting point by importing it into your own GitHub account
-- Work only within your own copy — do not push to the original template
-- Commit regularly to track your progress
 
 ---
 
