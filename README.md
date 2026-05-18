@@ -4,7 +4,8 @@
 
 ---
 
-![UI Showcase](docs/ui-images/ui_showcase.png)
+![UI Showcase](https://github.com/NinaP04/Budgetplaner-2.0/blob/cb1511deb0a741546a622d07674fc02290b1bf0b/docs%20/ui/ui_user_dashboard.PNG)
+
 
 ---
 
