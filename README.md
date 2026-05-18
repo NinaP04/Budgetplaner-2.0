@@ -117,7 +117,7 @@ Die Anwendung ermöglicht den Nutzenden:
 
 ## 🧩 Use Cases
 
-![UML Use Case Diagram](https://github.com/NinaP04/Budgetplaner-2.0/blob/5208d9686e5d193d4afbbe9a3e34e91c352cb4f3/docs%20/architecture-diagrams/Use_Case_Diagramm_FinFlow.png)
+![UML Use Case Diagram](https://github.com/NinaP04/Budgetplaner-2.0/blob/8cfbc7c872b910279618ad94aa172f4dcc64341f/docs%20/architecture-diagrams/Use_Case_Diagramm_FinFlow.png)
 
 ### Main Use Cases
 - Hauptmenü anzeigen (Bedienung aller Funktionen)
