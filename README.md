@@ -70,7 +70,7 @@ Die Anwendung ermöglicht den Nutzenden:
 ### 4. Einnahmen erfassen und verwalten
 **Als User möchte ich, meine Einnahmen erfassen und bearbeiten können.**
 
-- **Inputs:** Kategorie wählen, Einnahme wählen, Datum (`DD.MM.YYYY` oder `.` für heute), Art und Betrag in CHF erfassen
+- **Inputs:** Kategorie wählen, Einnahme wählen, Datum erfassen, Art und Betrag in CHF erfassen
 - **Outputs:** Einnahme wird als positiver Betrag gespeichert; vorhandene Einträge können bearbeitet und gelöscht werden
 
 ---
@@ -78,7 +78,7 @@ Die Anwendung ermöglicht den Nutzenden:
 ### 5. Ausgaben erfassen und verwalten
 **Als User möchte ich, meine Ausgaben erfassen und bearbeiten können.**
 
-- **Inputs:** Kategorie wählen, Ausgabe wählen, Datum (`DD.MM.YYYY` oder `.` für heute), Art und Betrag in CHF erfassen
+- **Inputs:** Kategorie wählen, Ausgabe wählen, Datum erfassen, Art und Betrag in CHF erfassen
 - **Outputs:** Ausgabe wird als negativer Betrag gespeichert; vorhandene Einträge können bearbeitet und gelöscht werden
 
 ---
@@ -86,8 +86,8 @@ Die Anwendung ermöglicht den Nutzenden:
 ### 6. Budget-Kategorien verwalten
 **Als User möchte ich  mein Budget in mehrere (Limit von X) anpassbare Kategorien unterteilen können, um den Überblick zu behalten.**
 
-- **Inputs:** 
-- **Outputs:** 
+- **Inputs:** Kategoriename eingeben, Aktion auswählen (erstellen/bearbeiten/löschen)
+- **Outputs:** Kategorie wird erstellt/aktualisiert/gelöscht und in der Kategorieliste angezeigt; Fehlermeldung bei doppelten Kategorienamen oder ungültigen Eingaben 
 
 ---
 
@@ -102,8 +102,8 @@ Die Anwendung ermöglicht den Nutzenden:
 ### 8. Warnung bei Limitüberschreitung
 **Als User möchte ich eine Warnung erhalten, wenn ich mein Budgetlimit überschritten habe.** 
 
-- **Inputs:** 
-- **Outputs:** 
+- **Inputs:** Eingabe einer Ausgabe, die das kategoriale Budgetlimit überschreitet
+- **Outputs:** Warnmeldung wird angezeigt (Visual Alert, Pop-up oder Nachricht); Ausgabe wird trotzdem gespeichert; Kategorie-Anzeige markiert Überschreitung (z.B. rote Hervorhebung) 
 
 ---
 
